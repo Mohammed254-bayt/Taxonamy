@@ -1,0 +1,100 @@
+"id","esco_code","preferred_label_en","description_en","description_ar","created_at","updated_at","alt_labels"
+1,"0",Armed forces occupations,"Armed forces occupations include all jobs held by members of the armed forces.  Members of the armed forces are those personnel who are currently serving in the armed forces, including auxiliary services, whether on a voluntary or compulsory basis, and who are not free to accept civilian employment and are subject to military discipline. Included are regular members of the army, navy, air force and other military services, as well as conscripts enrolled for military training or other service for a specified period.
+Occupations in this major group are classified into the following sub-major groups:
+01  Commissioned Armed Forces Officers
+02  Non-commissioned Armed Forces Officers
+03  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+Notes
+Many jobs performed by members of the armed forces are similar, in terms of the nature of the work performed, to civilian occupations such as medical doctors, radio operators, cooks, secretaries and heavy truck drivers.  Conceptually, it may be appropriate, therefore, to classify such jobs in the armed forces with similar civilian jobs.  This approach is adopted in several national occupation classifications.  Typically such classifications also identify a number of military-specific occupational groups.  In many countries, however, it is not possible to produce information about the nature of the work performed by members of the armed forces.  In adapting ISCO-08 for national purposes countries may wish, therefore, to consider what approach best suits their circumstances and user needs.  For purposes of international comparability, however, where data pertaining to members of the armed forces are reported and classified by occupation, they should be included, where possible, in ISCO-08 Major Group 0: Armed Forces Occupations.
+",,2025-04-17 12:43:10.765,2025-04-17 12:43:10.765,
+2,"01",Commissioned armed forces officers,"Commissioned armed forces officers provide leadership and management to organizational units in the armed forces and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes all members of the armed forces holding the rank of second lieutenant (or equivalent) or higher. Competent performance in most occupations in this sub-major group requires skills at the fourth ISCO skill level.
+Occupations in this sub-major group are classified into the following minor group:
+011  Commissioned Armed Forces Officers
+Excluded from this group are:
+-  jobs held by persons in civilian employment of government establishments concerned with defence issues; 
+-  police (other than military police);
+-  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.768,2025-04-17 12:43:10.768,
+3,"011",Commissioned armed forces officers,"Commissioned armed forces officers provide leadership and management to organizational units in the armed forces and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes all members of the armed forces holding the rank of second lieutenant (or equivalent) or higher.
+Occupations in this minor group are classified into the following unit group:
+0110 Commissioned Armed Forces Officers
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.769,2025-04-17 12:43:10.769,
+4,"0110",Commissioned armed forces officers,"Commissioned armed forces officers provide leadership and management to organizational units in the armed forces and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes all members of the armed forces holding the rank of second lieutenant (or equivalent) or higher.
+Examples of the occupations classified here: 
+- Admiral
+- Air commodore
+- Air marshal
+- Brigadier (army)
+- Captain (air force)
+- Captain (army)
+- Captain (navy)
+- Colonel (army)
+- Field marshal
+- Flight lieutenant (air force)
+- Flying officer (military)
+- General (army)
+- Group captain, (air force)
+- Lieutenant (army)
+- Major (army)
+- Midshipman
+- Naval officer (military) 
+- Navy commander 
+- Officer cadet (armed forces)
+- Second lieutenant (army)
+- Squadron leader
+- Sublieutenant (navy)
+- Wing commander
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.770,2025-04-17 12:43:10.770,
+5,"02",Non-commissioned armed forces officers,"Non-commissioned armed forces officers enforce military discipline and supervise the activities of those employed in Sub-major Group 03: Armed Forces Occupations, Other Ranks, and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes members of the armed forces holding ranks such as sergeant, warrant officer and sergeant major.  Competent performance in most occupations in this sub-major group requires skills at the second ISCO skill level.
+Occupations in this sub-major group are classified into the following minor group:
+021  Non-commissioned Armed Forces Officers
+Excluded from this group are: 
+  -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+  -  police (other than military police);
+  - customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.771,2025-04-17 12:43:10.771,
+6,"021",Non-commissioned armed forces officers,"Non-commissioned armed forces officers enforce military discipline and supervise the activities of those employed in Sub-major  031: Armed Forces Occupations, Other Ranks, and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes members of the armed forces holding ranks such as sergeant, warrant officer and sergeant major.
+Occupations in this minor group are classified into the following unit group:
+0210  Non-commissioned Armed Forces Officers
+Excluded from this group are: 
+ - jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ - police (other than military police);
+ - customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.772,2025-04-17 12:43:10.772,
+7,"0210",Non-commissioned armed forces officers,"Non-commissioned armed forces officers enforce military discipline and supervise the activities of those employed in Sub-major Group 0310: Armed Forces Occupations, Other Ranks, and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes members of the armed forces holding ranks such as sergeant, warrant officer and sergeant major.
+Examples of the occupations classified here:
+- Boatswain (navy)
+- Flight sergeant
+- Sergeant (army)
+- Sergeant major
+- Warrant officer
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.772,2025-04-17 12:43:10.772,
+8,"03","Armed forces occupations, other ranks","Armed forces occupations, other ranks include all conscripted and non-conscripted members of the armed forces except commissioned and non-commissioned officers.  They perform specific military tasks and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. Most occupations in this sub-major group require skills at the first ISCO skill level.
+Occupations in this sub-major group are classified into the following minor group:
+031  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.773,2025-04-17 12:43:10.773,
+9,"031","Armed forces occupations, other ranks","Armed forces occupations, other ranks include all conscripted and non-conscripted members of the armed forces except commissioned and non-commissioned officers.  They perform specific military tasks and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces.
+Occupations in this minor group are classified into the following unit group:
+0310  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;

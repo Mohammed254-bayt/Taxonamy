@@ -1,0 +1,65 @@
+In the Occupations page, there is a "View" icon for each occupation row. This icon is currently not functional.
+
+✅ Required Behavior:
+When the user clicks the View icon, open a modal that displays comprehensive details about the selected occupation, including:
+
+Its basic information (e.g., ID, preferred labels, ESCO code)
+
+All of its child occupations, along with their synonyms
+
+Its parent, which could be either:
+
+Another occupation
+
+An ESCO group
+
+📥 Query to get the child occupations and their synonyms:
+sql
+Copy
+Edit
+SELECT 
+  o.id AS occupation_id,
+  o.preferred_label_en,
+  o.preferred_label_ar,
+  o.esco_code,
+  JSON_AGG(DISTINCT s.title) AS synonyms
+FROM taxonomy_relationships tr
+JOIN occupations o 
+  ON tr.target_entity_type = 'occupation'
+  AND tr.target_entity_id = o.id
+LEFT JOIN occupation_synonyms os 
+  ON o.id = os.occupation_id
+LEFT JOIN synonyms s 
+  ON os.synonym_id = s.id
+WHERE tr.source_entity_type = 'occupation'
+  AND tr.source_entity_id = :occupation_id
+  AND tr.relationship_type = 'contains'
+GROUP BY o.id, o.preferred_label_en, o.preferred_label_ar, o.esco_code
+ORDER BY o.preferred_label_en;
+📤 Query to get the parent of the occupation (can be either occupation or esco_group):
+sql
+Copy
+Edit
+SELECT 
+  tr.source_entity_type,
+  tr.source_entity_id,
+  CASE 
+    WHEN tr.source_entity_type = 'occupation' THEN o.preferred_label_en
+    WHEN tr.source_entity_type = 'esco_group' THEN g.preferred_label_en
+  END AS parent_label,
+  CASE 
+    WHEN tr.source_entity_type = 'occupation' THEN o.esco_code
+    WHEN tr.source_entity_type = 'esco_group' THEN g.esco_code
+  END AS parent_code
+FROM taxonomy_relationships tr
+LEFT JOIN occupations o ON tr.source_entity_type = 'occupation' AND tr.source_entity_id = o.id
+LEFT JOIN taxonomy_groups g ON tr.source_entity_type = 'esco_group' AND tr.source_entity_id = g.id
+WHERE tr.target_entity_type = 'occupation'
+  AND tr.target_entity_id = :occupation_id
+  AND tr.relationship_type = 'contains';
+🔄 Expected UI Behavior:
+Show the parent entity, clearly labeled by its type (occupation or ESCO group).
+
+Display the list of children with synonyms.
+
+Use the same consistent styling and modal layout used across the system.

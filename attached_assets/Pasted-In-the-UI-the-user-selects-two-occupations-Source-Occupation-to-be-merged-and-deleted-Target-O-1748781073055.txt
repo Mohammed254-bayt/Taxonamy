@@ -1,0 +1,88 @@
+In the UI, the user selects two occupations:
+
+Source Occupation (to be merged and deleted)
+
+Target Occupation (to keep)
+
+On confirmation:
+
+Source’s main labels and synonyms are added to the target as synonyms (if not duplicates)
+
+Source occupation is deleted
+
+All its references in related tables are cleaned or reassigned if needed
+
+🧩 Backend Implementation Details
+🛠 Tables involved:
+occupations (id, preferred_label_en, preferred_label_ar, esco_code)
+
+occupation_synonyms (occupation_id, synonym_id)
+
+synonyms (id, title)
+
+📥 Step-by-Step SQL Logic
+1. Insert Source Labels as Synonyms to Target:
+sql
+Copy
+Edit
+-- Insert preferred_label_en
+INSERT INTO synonyms (title)
+SELECT DISTINCT preferred_label_en
+FROM occupations
+WHERE id = :source_id
+  AND preferred_label_en IS NOT NULL
+  AND preferred_label_en NOT IN (
+    SELECT s.title
+    FROM occupation_synonyms os
+    JOIN synonyms s ON os.synonym_id = s.id
+    WHERE os.occupation_id = :target_id
+  );
+
+-- Insert preferred_label_ar
+INSERT INTO synonyms (title)
+SELECT DISTINCT preferred_label_ar
+FROM occupations
+WHERE id = :source_id
+  AND preferred_label_ar IS NOT NULL
+  AND preferred_label_ar NOT IN (
+    SELECT s.title
+    FROM occupation_synonyms os
+    JOIN synonyms s ON os.synonym_id = s.id
+    WHERE os.occupation_id = :target_id
+  );
+2. Link those new synonyms to the target occupation:
+sql
+Copy
+Edit
+INSERT INTO occupation_synonyms (occupation_id, synonym_id)
+SELECT :target_id, s.id
+FROM synonyms s
+WHERE s.title IN (
+  SELECT preferred_label_en FROM occupations WHERE id = :source_id
+  UNION
+  SELECT preferred_label_ar FROM occupations WHERE id = :source_id
+);
+3. Move existing synonyms from source → target:
+sql
+Copy
+Edit
+INSERT INTO occupation_synonyms (occupation_id, synonym_id)
+SELECT :target_id, synonym_id
+FROM occupation_synonyms
+WHERE occupation_id = :source_id
+  AND synonym_id NOT IN (
+    SELECT synonym_id
+    FROM occupation_synonyms
+    WHERE occupation_id = :target_id
+  );
+4. Delete the source occupation:
+sql
+Copy
+Edit
+DELETE FROM occupation_synonyms WHERE occupation_id = :source_id;
+
+DELETE FROM occupations WHERE id = :source_id;
+🧱 Constraints & Validations
+❗ Prevent merging into the same occupation (source == target)
+
+❗ Avoid duplicate synonyms (check before insert)

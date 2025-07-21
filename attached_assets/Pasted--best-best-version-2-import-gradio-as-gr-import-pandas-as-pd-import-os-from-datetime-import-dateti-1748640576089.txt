@@ -1,0 +1,741 @@
+
+# best best version 2
+import gradio as gr
+import pandas as pd
+import os
+from datetime import datetime
+import numpy as np # For handling potential NaN issues with IDs
+
+# --- Configuration: Define CSV file paths ---
+BASE_PATH = '/content/drive/My Drive/New ontology'
+OCCUPATIONS_CSV = os.path.join(BASE_PATH, "occupations.csv")
+SYNONYMS_CSV = os.path.join(BASE_PATH, "synonyms.csv")
+OCCUPATION_SYNONYMS_CSV = os.path.join(BASE_PATH, "occupation_synonyms.csv")
+TAXONOMY_GROUPS_CSV = os.path.join(BASE_PATH, "taxonomy_groups.csv")
+TAXONOMY_RELATIONSHIPS_CSV = os.path.join(BASE_PATH, "taxonomy_relationships.csv")
+
+# Optional: Other CSVs for completeness (loaded and saved, but not directly edited in UI)
+TAXONOMY_SOURCES_CSV = os.path.join(BASE_PATH, "taxonomy_sources.csv")
+OCCUPATION_SOURCE_MAPPING_CSV = os.path.join(BASE_PATH, "occupation_source_mapping.csv")
+SYNONYM_SOURCE_MAPPING_CSV = os.path.join(BASE_PATH, "synonym_source_mapping.csv")
+GROUP_SOURCE_MAPPING_CSV = os.path.join(BASE_PATH, "group_source_mapping.csv")
+
+ALL_CSVS = {
+    "occupations": OCCUPATIONS_CSV,
+    "synonyms": SYNONYMS_CSV,
+    "occupation_synonyms": OCCUPATION_SYNONYMS_CSV,
+    "taxonomy_groups": TAXONOMY_GROUPS_CSV,
+    "taxonomy_relationships": TAXONOMY_RELATIONSHIPS_CSV,
+    "taxonomy_sources": TAXONOMY_SOURCES_CSV,
+    "occupation_source_mapping": OCCUPATION_SOURCE_MAPPING_CSV,
+    "synonym_source_mapping": SYNONYM_SOURCE_MAPPING_CSV,
+    "group_source_mapping": GROUP_SOURCE_MAPPING_CSV,
+}
+
+# --- Define CSV Columns (based on user description) ---
+# Ensure these match your CSV headers exactly
+OCCUPATIONS_COLS = ['id', 'esco_code', 'uri', 'scope_note', 'preferred_label_en', 'preferred_label_ar',
+                    'definition', 'description_ar', 'description_en', 'created_at', 'updated_at',
+                    'gst_id', 'is_genric_title', 'min_career_level', 'max_career_level']
+SYNONYMS_COLS = ['id', 'title', 'language', 'created_at', 'updated_at', 'title_orig']
+OCCUPATION_SYNONYMS_COLS = ['id', 'occupation_id', 'synonym_id', 'created_at']
+TAXONOMY_GROUPS_COLS = ['id', 'esco_code', 'preferred_label_en', 'description_en',
+                        'description_ar', 'created_at', 'updated_at', 'alt_labels']
+TAXONOMY_RELATIONSHIPS_COLS = ['relationship_id', 'source_entity_type', 'source_entity_id',
+                               'target_entity_type', 'target_entity_id', 'relationship_type', 'created_at']
+
+# Columns for optional CSVs (add if needed)
+TAXONOMY_SOURCES_COLS = ['id', 'name', 'description', 'created_at']
+OCCUPATION_SOURCE_MAPPING_COLS = ['id', 'occupation_id', 'source_id', 'is_verified', 'verification_method',
+                                  'confidence_score', 'is_moderated', 'created_at', 'gst_id']
+SYNONYM_SOURCE_MAPPING_COLS = ['id', 'synonym_id', 'source_id', 'is_verified', 'verification_method',
+                               'confidence_score', 'is_moderated', 'created_at', 'gst_id']
+GROUP_SOURCE_MAPPING_COLS = ['id', 'group_id', 'source_id', 'is_verified', 'verification_method',
+                             'confidence_score', 'is_moderated', 'created_at']
+
+COLUMN_DEFINITIONS = {
+    "occupations": OCCUPATIONS_COLS,
+    "synonyms": SYNONYMS_COLS,
+    "occupation_synonyms": OCCUPATION_SYNONYMS_COLS,
+    "taxonomy_groups": TAXONOMY_GROUPS_COLS,
+    "taxonomy_relationships": TAXONOMY_RELATIONSHIPS_COLS,
+    "taxonomy_sources": TAXONOMY_SOURCES_COLS,
+    "occupation_source_mapping": OCCUPATION_SOURCE_MAPPING_COLS,
+    "synonym_source_mapping": SYNONYM_SOURCE_MAPPING_COLS,
+    "group_source_mapping": GROUP_SOURCE_MAPPING_COLS,
+}
+
+# --- Helper Functions ---
+def get_current_timestamp():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+def load_csv_data(file_path, columns, dtype_spec=None):
+    """Loads a CSV file into a DataFrame. Creates it with headers if it doesn't exist."""
+    if not os.path.exists(file_path):
+        df = pd.DataFrame(columns=columns)
+        df.to_csv(file_path, index=False)
+        print(f"Created empty CSV: {file_path}")
+    try:
+        # Specify dtype for ID columns to avoid mixed type issues if some are empty
+        # And ensure they are treated as objects (strings) if they can be non-numeric,
+        # or Int64 if they are numeric but can have NaNs.
+        # For simplicity, load as object first, then try to convert to numeric where appropriate.
+        df = pd.read_csv(file_path, dtype=object) # Load all as object initially
+
+        # Ensure all defined columns exist, add if missing
+        for col in columns:
+            if col not in df.columns:
+                df[col] = None # Or np.nan for numeric types later
+
+        # Attempt to convert known ID columns to a numeric type that supports NaNs
+        # This is a bit of a heuristic; adjust based on actual ID types
+        id_like_cols = [col for col in df.columns if 'id' in col.lower() or 'code' in col.lower()]
+        for col in id_like_cols:
+            if col in df.columns:
+                # Try to convert to Int64 if possible (supports NaN for integers)
+                try:
+                    # Replace empty strings with NaN before conversion
+                    df[col] = df[col].replace('', np.nan)
+                    # If all non-NaN values are numeric-like
+                    if df[col].dropna().astype(str).str.isnumeric().all():
+                         df[col] = pd.to_numeric(df[col], errors='coerce').astype('Int64')
+                except Exception:
+                    pass # Keep as object if conversion fails
+
+        return df[columns] # Ensure column order and selection
+
+    except pd.errors.EmptyDataError:
+        print(f"Warning: {file_path} is empty. Returning DataFrame with columns.")
+        return pd.DataFrame(columns=columns)
+    except Exception as e:
+        print(f"Error loading {file_path}: {e}")
+        return pd.DataFrame(columns=columns)
+
+
+def save_all_data(data_frames):
+    """Saves all DataFrames back to their CSV files."""
+    for name, df in data_frames.items():
+        file_path = ALL_CSVS.get(name)
+        if file_path:
+            try:
+                # Before saving, convert Int64 columns back to object if they contain NaNs,
+                # then to float, then to int string to avoid ".0" for integers.
+                # Or simply save as is and let pandas handle it (might save NaNs as empty strings).
+                df_to_save = df.copy()
+                for col in df_to_save.columns:
+                    if pd.api.types.is_integer_dtype(df_to_save[col].dtype) and df_to_save[col].isnull().any():
+                         # If it's Int64 with NaNs, pandas handles it well by default (saves as empty)
+                         pass
+                    elif pd.api.types.is_numeric_dtype(df_to_save[col].dtype):
+                         # For other numeric types, ensure NaNs are empty strings
+                         df_to_save[col] = df_to_save[col].astype(object).where(pd.notnull(df_to_save[col]), '')
+
+
+                df_to_save.to_csv(file_path, index=False)
+                print(f"Saved {name} to {file_path}")
+            except Exception as e:
+                print(f"Error saving {file_path}: {e}")
+                return f"Error saving {file_path}: {e}"
+        else:
+            print(f"Warning: No path defined for DataFrame '{name}'")
+    return "All changes saved successfully!"
+
+def get_next_id(df, id_column='id'):
+    """Generates the next available ID for a DataFrame."""
+    if df.empty or id_column not in df.columns or df[id_column].isnull().all():
+        return 1
+    # Ensure column is numeric for max() operation, handling potential NaNs or non-numeric strings
+    numeric_ids = pd.to_numeric(df[id_column], errors='coerce').dropna()
+    if numeric_ids.empty:
+        return 1
+    return int(numeric_ids.max()) + 1
+
+
+# --- Main Application Logic Functions ---
+
+def get_groups_for_dropdown(df_taxonomy_groups):
+    if df_taxonomy_groups is None or df_taxonomy_groups.empty:
+        return []
+    # Ensure 'id' and 'preferred_label_en' are present
+    if 'id' not in df_taxonomy_groups.columns or 'preferred_label_en' not in df_taxonomy_groups.columns:
+        return []
+
+    # Handle potential NaN values in preferred_label_en or id
+    groups = df_taxonomy_groups.dropna(subset=['id', 'preferred_label_en'])
+    return [(f"{row['preferred_label_en']} (ID: {row['id']})", row['id']) for _, row in groups.iterrows()]
+
+
+def get_occupations_in_group(group_id, df_occupations, df_taxonomy_relationships):
+    if group_id is None or df_occupations is None or df_taxonomy_relationships is None:
+        return pd.DataFrame(columns=['id', 'preferred_label_en', 'gst_id']) # Return specific columns
+
+    occupation_ids = set()
+    # Ensure IDs are of the same type for comparison (e.g., int or string)
+    # Assuming group_id is the type from the dropdown (usually int if converted from string)
+    # And entity_ids in df_taxonomy_relationships are loaded as Int64 or object.
+
+    # Convert group_id to string for comparison if entity_ids are strings, or int if they are numbers.
+    # Let's assume entity_ids are numeric after loading (Int64)
+    try:
+        group_id_numeric = pd.to_numeric(group_id)
+    except: # If group_id cannot be numeric, this logic might fail.
+        return pd.DataFrame(columns=['id', 'preferred_label_en', 'gst_id'])
+
+
+    # Occupations contained by the group
+    contained_occupations = df_taxonomy_relationships[
+        (df_taxonomy_relationships['source_entity_type'] == 'esco_group') &
+        (pd.to_numeric(df_taxonomy_relationships['source_entity_id'], errors='coerce') == group_id_numeric) &
+        (df_taxonomy_relationships['target_entity_type'] == 'occupation') &
+        (df_taxonomy_relationships['relationship_type'] == 'contains')
+    ]
+    occupation_ids.update(pd.to_numeric(contained_occupations['target_entity_id'], errors='coerce').dropna().astype(int).tolist())
+
+    # Occupations that contain the group (less common, but for completeness based on 'contained_by')
+    # This usually means an occupation is part of a group, so target_entity_id is group_id
+    group_contains_occupations = df_taxonomy_relationships[
+        (df_taxonomy_relationships['target_entity_type'] == 'esco_group') &
+        (pd.to_numeric(df_taxonomy_relationships['target_entity_id'], errors='coerce') == group_id_numeric) &
+        (df_taxonomy_relationships['source_entity_type'] == 'occupation') &
+        (df_taxonomy_relationships['relationship_type'] == 'contained_by') # occupation is contained_by group
+    ]
+    occupation_ids.update(pd.to_numeric(group_contains_occupations['source_entity_id'], errors='coerce').dropna().astype(int).tolist())
+
+    if not occupation_ids:
+        return pd.DataFrame(columns=['id', 'preferred_label_en', 'gst_id'])
+
+    # Filter occupations DataFrame
+    # Ensure df_occupations['id'] is numeric for comparison
+    df_occupations_filtered = df_occupations[pd.to_numeric(df_occupations['id'], errors='coerce').isin(list(occupation_ids))]
+    return df_occupations_filtered[['id', 'preferred_label_en', 'gst_id']]
+
+
+def get_synonyms_for_occupation(occupation_id, df_occupation_synonyms, df_synonyms):
+    if occupation_id is None or df_occupation_synonyms is None or df_synonyms is None:
+        return pd.DataFrame(columns=['id', 'title', 'language'])
+
+    try:
+        occupation_id_numeric = pd.to_numeric(occupation_id)
+    except:
+        return pd.DataFrame(columns=['id', 'title', 'language'])
+
+    # Get synonym IDs from occupation_synonyms table
+    # Ensure 'occupation_id' in df_occupation_synonyms is numeric
+    synonym_links = df_occupation_synonyms[pd.to_numeric(df_occupation_synonyms['occupation_id'], errors='coerce') == occupation_id_numeric]
+    synonym_ids = pd.to_numeric(synonym_links['synonym_id'], errors='coerce').dropna().astype(int).tolist()
+
+    if not synonym_ids:
+        return pd.DataFrame(columns=['id', 'title', 'language'])
+
+    # Filter synonyms table
+    # Ensure 'id' in df_synonyms is numeric
+    df_synonyms_filtered = df_synonyms[pd.to_numeric(df_synonyms['id'], errors='coerce').isin(synonym_ids)]
+    return df_synonyms_filtered[['id', 'title', 'language']]
+
+
+# --- Gradio Action Functions ---
+
+data_dfs = {} # Global dictionary to hold all dataframes
+
+def initialize_data():
+    """Loads all CSVs into the global data_dfs dictionary."""
+    global data_dfs
+    for name, path in ALL_CSVS.items():
+        cols = COLUMN_DEFINITIONS.get(name, [])
+        data_dfs[name] = load_csv_data(path, cols)
+
+    # For dropdowns, ensure IDs are of a consistent type, try Int64
+    if 'taxonomy_groups' in data_dfs and 'id' in data_dfs['taxonomy_groups'].columns:
+        data_dfs['taxonomy_groups']['id'] = pd.to_numeric(data_dfs['taxonomy_groups']['id'], errors='coerce').astype('Int64')
+    if 'occupations' in data_dfs and 'id' in data_dfs['occupations'].columns:
+        data_dfs['occupations']['id'] = pd.to_numeric(data_dfs['occupations']['id'], errors='coerce').astype('Int64')
+    if 'synonyms' in data_dfs and 'id' in data_dfs['synonyms'].columns:
+        data_dfs['synonyms']['id'] = pd.to_numeric(data_dfs['synonyms']['id'], errors='coerce').astype('Int64')
+
+    # Prepare initial state for Gradio components
+    group_choices = get_groups_for_dropdown(data_dfs.get("taxonomy_groups"))
+
+    # Return a dictionary matching the outputs of the gr.Blocks().load() function
+    return {
+        group_dropdown: gr.Dropdown(choices=group_choices, value=group_choices[0][1] if group_choices else None),
+        occupations_in_group_display: pd.DataFrame(columns=['id', 'preferred_label_en', 'gst_id']),
+        selected_occupation_id_state: None,
+        selected_occupation_label_state: "",
+        occupation_details_display: "",
+        synonyms_for_occupation_display: pd.DataFrame(columns=['id', 'title', 'language']),
+        synonym_to_delete_dropdown: gr.Dropdown(choices=[]),
+        status_text: "Data loaded. Select a group."
+    }
+
+
+def handle_group_selection(group_id, current_selected_occupation_id, current_selected_occupation_label):
+    if group_id is None:
+        return {
+            occupations_in_group_display: pd.DataFrame(columns=['id', 'preferred_label_en', 'gst_id']),
+            selected_occupation_id_state: None,
+            selected_occupation_label_state: "",
+            occupation_details_display: "No group selected.",
+            synonyms_for_occupation_display: pd.DataFrame(columns=['id', 'title', 'language']),
+            synonym_to_delete_dropdown: gr.Dropdown(choices=[]),
+            status_text: "No group selected."
+        }
+
+    df_occupations = data_dfs.get("occupations")
+    df_taxonomy_relationships = data_dfs.get("taxonomy_relationships")
+
+    occupations_df = get_occupations_in_group(group_id, df_occupations, df_taxonomy_relationships)
+
+    # If the previously selected occupation is not in the new list, clear details
+    new_selected_occ_id = current_selected_occupation_id
+    new_selected_occ_label = current_selected_occupation_label
+    occupation_details_text = ""
+    synonyms_df = pd.DataFrame(columns=['id', 'title', 'language'])
+    synonym_choices_for_delete = []
+
+    if current_selected_occupation_id is not None:
+        # Check if current_selected_occupation_id (numeric) is in occupations_df['id'] (numeric)
+        if occupations_df.empty or not pd.to_numeric(current_selected_occupation_id) in pd.to_numeric(occupations_df['id']).tolist():
+            new_selected_occ_id = None
+            new_selected_occ_label = ""
+        else: # Occupation is still in the list, refresh its details
+            occupation_details_text = f"Occupation: {new_selected_occ_label} (ID: {new_selected_occ_id})"
+            synonyms_df = get_synonyms_for_occupation(new_selected_occ_id, data_dfs.get("occupation_synonyms"), data_dfs.get("synonyms"))
+            if not synonyms_df.empty:
+                synonym_choices_for_delete = [(f"{row['title']} ({row['language']}) (ID: {row['id']})", row['id']) for _, row in synonyms_df.iterrows()]
+
+    return {
+        occupations_in_group_display: occupations_df,
+        selected_occupation_id_state: new_selected_occ_id,
+        selected_occupation_label_state: new_selected_occ_label,
+        occupation_details_display: occupation_details_text if new_selected_occ_id else "Select an occupation from the list.",
+        synonyms_for_occupation_display: synonyms_df,
+        synonym_to_delete_dropdown: gr.Dropdown(choices=synonym_choices_for_delete, value=None),
+        status_text: f"Displaying occupations for selected group (ID: {group_id})."
+    }
+
+
+def handle_occupation_selection(evt: gr.SelectData, occupations_df_display):
+    if evt.value is None or evt.index is None : # evt.value is the cell value, evt.index is (row, col)
+         return {
+            selected_occupation_id_state: None,
+            selected_occupation_label_state: "",
+            occupation_details_display: "No occupation selected or selection invalid.",
+            synonyms_for_occupation_display: pd.DataFrame(columns=['id', 'title', 'language']),
+            synonym_to_delete_dropdown: gr.Dropdown(choices=[]),
+            status_text: "Occupation selection cleared or invalid."
+        }
+
+    selected_row_index = evt.index[0] # Get row index
+
+    # occupations_df_display is the DataFrame currently shown in the UI component
+    # It might be a subset or reordered version of the full df_occupations
+    # We need to get the 'id' from the selected row.
+    # Assuming 'id' is the first column in occupations_in_group_display
+    try:
+        # The occupations_df_display is the DataFrame bound to the gr.DataFrame component
+        # If it's directly from get_occupations_in_group, it should have 'id'
+        selected_occupation_id = occupations_df_display.iloc[selected_row_index]['id']
+        selected_occupation_label = occupations_df_display.iloc[selected_row_index]['preferred_label_en']
+        selected_occupation_id = pd.to_numeric(selected_occupation_id) # Ensure numeric
+    except (IndexError, KeyError, TypeError) as e:
+        print(f"Error processing occupation selection: {e}")
+        return {
+            selected_occupation_id_state: None,
+            selected_occupation_label_state: "",
+            occupation_details_display: "Error selecting occupation.",
+            synonyms_for_occupation_display: pd.DataFrame(columns=['id', 'title', 'language']),
+            synonym_to_delete_dropdown: gr.Dropdown(choices=[]),
+            status_text: "Error selecting occupation."
+        }
+
+    df_occupation_synonyms = data_dfs.get("occupation_synonyms")
+    df_synonyms = data_dfs.get("synonyms")
+    synonyms_df = get_synonyms_for_occupation(selected_occupation_id, df_occupation_synonyms, df_synonyms)
+
+    synonym_choices_for_delete = []
+    if not synonyms_df.empty:
+        synonym_choices_for_delete = [(f"{row['title']} ({row['language']}) (ID: {row['id']})", row['id']) for _, row in synonyms_df.iterrows()]
+
+    details_text = f"Selected Occupation: {selected_occupation_label} (ID: {selected_occupation_id})"
+
+    return {
+        selected_occupation_id_state: selected_occupation_id,
+        selected_occupation_label_state: selected_occupation_label,
+        occupation_details_display: details_text,
+        synonyms_for_occupation_display: synonyms_df,
+        synonym_to_delete_dropdown: gr.Dropdown(choices=synonym_choices_for_delete, value=None),
+        status_text: details_text
+    }
+
+
+def add_occupation(group_id, new_occ_label_en, new_occ_esco_code, new_occ_gst_id):
+    global data_dfs
+    if not group_id or not new_occ_label_en:
+        return {status_text: "Group ID and Occupation Label (EN) are required.", occupations_in_group_display: data_dfs.get("occupations")}
+
+
+    df_occupations = data_dfs["occupations"]
+    df_taxonomy_relationships = data_dfs["taxonomy_relationships"]
+
+    new_occ_id = get_next_id(df_occupations, 'id')
+    timestamp = get_current_timestamp()
+
+    # Create new occupation record
+    new_occupation_data = {col: None for col in OCCUPATIONS_COLS} # Initialize with None
+    new_occupation_data.update({
+        'id': new_occ_id,
+        'preferred_label_en': new_occ_label_en,
+        'esco_code': new_occ_esco_code if new_occ_esco_code else None,
+        'gst_id': new_occ_gst_id if new_occ_gst_id else None,
+        'created_at': timestamp,
+        'updated_at': timestamp
+    })
+    # df_occupations = df_occupations.append(new_occupation_data, ignore_index=True) # deprecated
+    df_occupations = pd.concat([df_occupations, pd.DataFrame([new_occupation_data])], ignore_index=True)
+
+
+    # Create relationship record
+    new_relationship_id = get_next_id(df_taxonomy_relationships, 'relationship_id')
+    new_relationship_data = {
+        'relationship_id': new_relationship_id,
+        'source_entity_type': 'esco_group',
+        'source_entity_id': group_id, # Should be numeric
+        'target_entity_type': 'occupation',
+        'target_entity_id': new_occ_id, # Should be numeric
+        'relationship_type': 'contains',
+        'created_at': timestamp
+    }
+    # df_taxonomy_relationships = df_taxonomy_relationships.append(new_relationship_data, ignore_index=True) # deprecated
+    df_taxonomy_relationships = pd.concat([df_taxonomy_relationships, pd.DataFrame([new_relationship_data])], ignore_index=True)
+
+    data_dfs["occupations"] = df_occupations
+    data_dfs["taxonomy_relationships"] = df_taxonomy_relationships
+
+    # Refresh occupations display for the current group
+    updated_occupations_in_group = get_occupations_in_group(group_id, df_occupations, df_taxonomy_relationships)
+
+    return {
+        occupations_in_group_display: updated_occupations_in_group,
+        status_text: f"Occupation '{new_occ_label_en}' (ID: {new_occ_id}) added to group {group_id}.",
+        # Clear input fields
+        new_occupation_label_en_input: "",
+        new_occupation_esco_code_input: "",
+        new_occupation_gst_id_input: ""
+    }
+
+
+def delete_occupation(occupation_id_to_delete, current_group_id):
+    global data_dfs
+    if occupation_id_to_delete is None:
+        return {status_text: "No occupation selected to delete."}
+
+    occupation_id_to_delete = pd.to_numeric(occupation_id_to_delete)
+
+    df_occupations = data_dfs["occupations"]
+    df_occupation_synonyms = data_dfs["occupation_synonyms"]
+    df_taxonomy_relationships = data_dfs["taxonomy_relationships"]
+    # Potentially: df_occupation_source_mapping
+
+    # 1. Delete from occupations table
+    label = df_occupations.loc[pd.to_numeric(df_occupations['id']) == occupation_id_to_delete, 'preferred_label_en'].iloc[0]
+    df_occupations = df_occupations[pd.to_numeric(df_occupations['id']) != occupation_id_to_delete]
+
+    # 2. Delete from occupation_synonyms table
+    df_occupation_synonyms = df_occupation_synonyms[pd.to_numeric(df_occupation_synonyms['occupation_id']) != occupation_id_to_delete]
+
+    # 3. Delete from taxonomy_relationships table (where it's source or target)
+    df_taxonomy_relationships = df_taxonomy_relationships[
+        ~(((df_taxonomy_relationships['source_entity_type'] == 'occupation') & (pd.to_numeric(df_taxonomy_relationships['source_entity_id']) == occupation_id_to_delete)) |
+          ((df_taxonomy_relationships['target_entity_type'] == 'occupation') & (pd.to_numeric(df_taxonomy_relationships['target_entity_id']) == occupation_id_to_delete)))
+    ]
+
+    # (Optional: Delete from occupation_source_mapping)
+    # df_occupation_source_mapping = data_dfs.get("occupation_source_mapping")
+    # if df_occupation_source_mapping is not None:
+    #     df_occupation_source_mapping = df_occupation_source_mapping[pd.to_numeric(df_occupation_source_mapping['occupation_id']) != occupation_id_to_delete]
+    #     data_dfs["occupation_source_mapping"] = df_occupation_source_mapping
+
+    data_dfs["occupations"] = df_occupations
+    data_dfs["occupation_synonyms"] = df_occupation_synonyms
+    data_dfs["taxonomy_relationships"] = df_taxonomy_relationships
+
+    # Refresh occupations display for the current group
+    updated_occupations_in_group = get_occupations_in_group(current_group_id, df_occupations, df_taxonomy_relationships)
+
+    return {
+        occupations_in_group_display: updated_occupations_in_group,
+        selected_occupation_id_state: None, # Clear selection
+        selected_occupation_label_state: "",
+        occupation_details_display: "",
+        synonyms_for_occupation_display: pd.DataFrame(columns=['id', 'title', 'language']),
+        synonym_to_delete_dropdown: gr.Dropdown(choices=[]),
+        status_text: f"Occupation '{label}' (ID: {occupation_id_to_delete}) and its associations deleted."
+    }
+
+
+def add_synonym(occupation_id, new_syn_title, new_syn_lang):
+    global data_dfs
+    if occupation_id is None or not new_syn_title or not new_syn_lang:
+        return {status_text: "Occupation must be selected, and synonym title/language provided."}
+
+    occupation_id = pd.to_numeric(occupation_id)
+    df_synonyms = data_dfs["synonyms"]
+    df_occupation_synonyms = data_dfs["occupation_synonyms"]
+
+    # Check if synonym already exists
+    existing_synonym = df_synonyms[
+        (df_synonyms['title'].astype(str).str.lower() == str(new_syn_title).lower()) &
+        (df_synonyms['language'].astype(str).str.lower() == str(new_syn_lang).lower())
+    ]
+
+    timestamp = get_current_timestamp()
+    if not existing_synonym.empty:
+        synonym_id = pd.to_numeric(existing_synonym['id'].iloc[0])
+        status_msg_prefix = f"Existing synonym '{new_syn_title}' (ID: {synonym_id})"
+    else:
+        synonym_id = get_next_id(df_synonyms, 'id')
+        new_syn_data = {
+            'id': synonym_id,
+            'title': new_syn_title,
+            'language': new_syn_lang,
+            'created_at': timestamp,
+            'updated_at': timestamp,
+            'title_orig': None # Or new_syn_title
+        }
+        # df_synonyms = df_synonyms.append(new_syn_data, ignore_index=True) # deprecated
+        df_synonyms = pd.concat([df_synonyms, pd.DataFrame([new_syn_data])], ignore_index=True)
+        data_dfs["synonyms"] = df_synonyms
+        status_msg_prefix = f"New synonym '{new_syn_title}' (ID: {synonym_id}) created and"
+
+    # Link synonym to occupation, if not already linked
+    is_already_linked = df_occupation_synonyms[
+        (pd.to_numeric(df_occupation_synonyms['occupation_id']) == occupation_id) &
+        (pd.to_numeric(df_occupation_synonyms['synonym_id']) == synonym_id)
+    ]
+    if is_already_linked.empty:
+        new_link_id = get_next_id(df_occupation_synonyms, 'id')
+        new_link_data = {
+            'id': new_link_id,
+            'occupation_id': occupation_id,
+            'synonym_id': synonym_id,
+            'created_at': timestamp
+        }
+        # df_occupation_synonyms = df_occupation_synonyms.append(new_link_data, ignore_index=True) # deprecated
+        df_occupation_synonyms = pd.concat([df_occupation_synonyms, pd.DataFrame([new_link_data])], ignore_index=True)
+        data_dfs["occupation_synonyms"] = df_occupation_synonyms
+        status_msg_suffix = "linked to occupation."
+    else:
+        status_msg_suffix = "was already linked to occupation."
+
+    # Refresh synonym display
+    updated_synonyms_for_occ = get_synonyms_for_occupation(occupation_id, df_occupation_synonyms, df_synonyms)
+    synonym_choices_for_delete = []
+    if not updated_synonyms_for_occ.empty:
+        synonym_choices_for_delete = [(f"{row['title']} ({row['language']}) (ID: {row['id']})", row['id']) for _, row in updated_synonyms_for_occ.iterrows()]
+
+    return {
+        synonyms_for_occupation_display: updated_synonyms_for_occ,
+        synonym_to_delete_dropdown: gr.Dropdown(choices=synonym_choices_for_delete, value=None),
+        status_text: status_msg_prefix + " " + status_msg_suffix,
+        # Clear inputs
+        new_synonym_title_input: "",
+        # new_synonym_language_dropdown: "en" # Reset if needed
+    }
+
+
+def delete_synonym_link(occupation_id, synonym_id_to_delete):
+    global data_dfs
+    if occupation_id is None or synonym_id_to_delete is None:
+        return {status_text: "Occupation and Synonym must be selected to delete link."}
+
+    occupation_id = pd.to_numeric(occupation_id)
+    synonym_id_to_delete = pd.to_numeric(synonym_id_to_delete)
+
+    df_occupation_synonyms = data_dfs["occupation_synonyms"]
+    df_synonyms = data_dfs["synonyms"] # Needed to get title for status
+
+    # Get synonym title for status message
+    synonym_title = "Unknown Synonym"
+    if not df_synonyms[pd.to_numeric(df_synonyms['id']) == synonym_id_to_delete].empty:
+        synonym_title = df_synonyms[pd.to_numeric(df_synonyms['id']) == synonym_id_to_delete]['title'].iloc[0]
+
+
+    # Remove the link from occupation_synonyms
+    original_len = len(df_occupation_synonyms)
+    df_occupation_synonyms = df_occupation_synonyms[
+        ~((pd.to_numeric(df_occupation_synonyms['occupation_id']) == occupation_id) &
+          (pd.to_numeric(df_occupation_synonyms['synonym_id']) == synonym_id_to_delete))
+    ]
+    data_dfs["occupation_synonyms"] = df_occupation_synonyms
+
+    action_taken = "Link removed." if len(df_occupation_synonyms) < original_len else "Link not found or already removed."
+
+    # Optional: Delete synonym from synonyms table if no other occupation uses it
+    # This adds complexity; for a "simple" interface, just unlinking is often enough.
+    # If you want to implement this:
+    # remaining_links = df_occupation_synonyms[pd.to_numeric(df_occupation_synonyms['synonym_id']) == synonym_id_to_delete]
+    # if remaining_links.empty:
+    #     df_synonyms = df_synonyms[pd.to_numeric(df_synonyms['id']) != synonym_id_to_delete]
+    #     data_dfs["synonyms"] = df_synonyms
+    #     action_taken += f" Synonym (ID: {synonym_id_to_delete}) also deleted as it's no longer used."
+
+    # Refresh synonym display
+    updated_synonyms_for_occ = get_synonyms_for_occupation(occupation_id, df_occupation_synonyms, df_synonyms)
+    synonym_choices_for_delete = []
+    if not updated_synonyms_for_occ.empty:
+        synonym_choices_for_delete = [(f"{row['title']} ({row['language']}) (ID: {row['id']})", row['id']) for _, row in updated_synonyms_for_occ.iterrows()]
+
+    return {
+        synonyms_for_occupation_display: updated_synonyms_for_occ,
+        synonym_to_delete_dropdown: gr.Dropdown(choices=synonym_choices_for_delete, value=None),
+        status_text: f"Synonym '{synonym_title}' (ID: {synonym_id_to_delete}): {action_taken}"
+    }
+
+
+def trigger_save_all_data():
+    global data_dfs
+    message = save_all_data(data_dfs)
+    return {status_text: message}
+
+
+# --- Gradio UI Definition ---
+with gr.Blocks(theme=gr.themes.Soft()) as demo:
+    gr.Markdown("# Taxonomy Editor")
+    status_text = gr.Textbox(label="Status", interactive=False, lines=1)
+
+    # States to hold current selections
+    selected_group_id_state = gr.State(None)
+    selected_occupation_id_state = gr.State(None)
+    selected_occupation_label_state = gr.State("") # To display name easily
+
+    with gr.Row():
+        with gr.Column(scale=1):
+            gr.Markdown("## 1. Select Group")
+            group_dropdown = gr.Dropdown(label="Taxonomy Group") # Choices populated by load function
+
+            gr.Markdown("## 2. Occupations in Selected Group")
+            occupations_in_group_display = gr.DataFrame(
+                label="Occupations",
+                headers=['id', 'preferred_label_en', 'gst_id'], # Ensure these match output of get_occupations_in_group
+                interactive=False # Selection handled by .select event
+                # Removed height parameter
+            )
+
+        with gr.Column(scale=2):
+            gr.Markdown("## 3. Selected Occupation Details")
+            occupation_details_display = gr.Textbox(label="Occupation Details", interactive=False, lines=2)
+
+            gr.Markdown("### Synonyms for Selected Occupation")
+            synonyms_for_occupation_display = gr.DataFrame(
+                label="Synonyms",
+                headers=['id', 'title', 'language'], # Ensure these match output of get_synonyms_for_occupation
+                interactive=False
+                # Removed height parameter
+            )
+
+            with gr.Tabs():
+                with gr.TabItem("Manage Occupation"):
+                    gr.Markdown("#### Add New Occupation to Current Group")
+                    with gr.Row():
+                        new_occupation_label_en_input = gr.Textbox(label="Preferred Label (EN)*")
+                        new_occupation_esco_code_input = gr.Textbox(label="ESCO Code (Optional)")
+                    new_occupation_gst_id_input = gr.Textbox(label="GST ID (Optional)")
+                    add_occupation_button = gr.Button("Add Occupation to Group")
+
+                    gr.Markdown("---")
+                    delete_selected_occupation_button = gr.Button("Delete Selected Occupation", variant="stop")
+
+                with gr.TabItem("Manage Synonyms"):
+                    gr.Markdown("#### Add Synonym to Selected Occupation")
+                    with gr.Row():
+                        new_synonym_title_input = gr.Textbox(label="Synonym Title*")
+                        new_synonym_language_dropdown = gr.Dropdown(label="Language*", choices=["en", "ar"], value="en")
+                    add_synonym_button = gr.Button("Add Synonym")
+
+                    gr.Markdown("---")
+                    gr.Markdown("#### Delete Synonym Link from Selected Occupation")
+                    synonym_to_delete_dropdown = gr.Dropdown(label="Select Synonym to Unlink") # Choices populated dynamically
+                    delete_synonym_button = gr.Button("Delete Selected Synonym Link", variant="stop")
+
+    gr.Markdown("---")
+    save_changes_button = gr.Button("Save All Changes to CSVs", variant="primary")
+
+    # --- Event Handling ---
+
+    # Load data when the app starts and populate initial dropdown
+    # The `outputs` must match the structure expected by initialize_data
+    # This uses dictionary unpacking for outputs.
+    outputs_for_load = [
+        group_dropdown, occupations_in_group_display,
+        selected_occupation_id_state, selected_occupation_label_state,
+        occupation_details_display, synonyms_for_occupation_display,
+        synonym_to_delete_dropdown, status_text
+    ]
+    demo.load(
+        fn=initialize_data,
+        inputs=None,
+        outputs=outputs_for_load # Pass the list of components
+    )
+
+    group_dropdown.change(
+        fn=handle_group_selection,
+        inputs=[group_dropdown, selected_occupation_id_state, selected_occupation_label_state],
+        outputs=[occupations_in_group_display, selected_occupation_id_state, selected_occupation_label_state,
+                 occupation_details_display, synonyms_for_occupation_display, synonym_to_delete_dropdown, status_text, selected_group_id_state] # selected_group_id_state added
+    ).then(
+        lambda x: x, # Pass through the selected group ID
+        inputs=[group_dropdown],
+        outputs=[selected_group_id_state] # Update the state
+    )
+
+
+    # When an occupation is selected from the DataFrame
+    occupations_in_group_display.select(
+        fn=handle_occupation_selection,
+        inputs=[occupations_in_group_display], # Pass the DataFrame component itself
+        outputs=[selected_occupation_id_state, selected_occupation_label_state,
+                 occupation_details_display, synonyms_for_occupation_display, synonym_to_delete_dropdown, status_text]
+    )
+
+    add_occupation_button.click(
+        fn=add_occupation,
+        inputs=[selected_group_id_state, new_occupation_label_en_input, new_occupation_esco_code_input, new_occupation_gst_id_input],
+        outputs=[occupations_in_group_display, status_text, new_occupation_label_en_input, new_occupation_esco_code_input, new_occupation_gst_id_input]
+    )
+
+    delete_selected_occupation_button.click(
+        fn=delete_occupation,
+        inputs=[selected_occupation_id_state, selected_group_id_state], # Pass current group to refresh its list
+        outputs=[occupations_in_group_display, selected_occupation_id_state, selected_occupation_label_state,
+                 occupation_details_display, synonyms_for_occupation_display, synonym_to_delete_dropdown, status_text]
+    )
+
+    add_synonym_button.click(
+        fn=add_synonym,
+        inputs=[selected_occupation_id_state, new_synonym_title_input, new_synonym_language_dropdown],
+        outputs=[synonyms_for_occupation_display, synonym_to_delete_dropdown, status_text, new_synonym_title_input]
+    )
+
+    delete_synonym_button.click(
+        fn=delete_synonym_link,
+        inputs=[selected_occupation_id_state, synonym_to_delete_dropdown],
+        outputs=[synonyms_for_occupation_display, synonym_to_delete_dropdown, status_text]
+    )
+
+    save_changes_button.click(
+        fn=trigger_save_all_data,
+        inputs=None,
+        outputs=[status_text]
+    )
+
+if __name__ == "__main__":
+    # Create dummy CSV files if they don't exist for testing
+    print("Checking for dummy CSV files...")
+    for name, path in ALL_CSVS.items():
+        cols = COLUMN_DEFINITIONS.get(name, [])
+        if not os.path.exists(path):
+            pd.DataFrame(columns=cols).to_csv(path, index=False)
+            print(f"Created dummy CSV: {path}")
+
+    print("Launching Gradio App...")
+    demo.launch(debug=True)

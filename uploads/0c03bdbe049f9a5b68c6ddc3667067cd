@@ -1,0 +1,1000 @@
+"id","esco_code","preferred_label_en","description_en","description_ar","created_at","updated_at","alt_labels"
+1,"0",Armed forces occupations,"Armed forces occupations include all jobs held by members of the armed forces.  Members of the armed forces are those personnel who are currently serving in the armed forces, including auxiliary services, whether on a voluntary or compulsory basis, and who are not free to accept civilian employment and are subject to military discipline. Included are regular members of the army, navy, air force and other military services, as well as conscripts enrolled for military training or other service for a specified period.
+Occupations in this major group are classified into the following sub-major groups:
+01  Commissioned Armed Forces Officers
+02  Non-commissioned Armed Forces Officers
+03  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+Notes
+Many jobs performed by members of the armed forces are similar, in terms of the nature of the work performed, to civilian occupations such as medical doctors, radio operators, cooks, secretaries and heavy truck drivers.  Conceptually, it may be appropriate, therefore, to classify such jobs in the armed forces with similar civilian jobs.  This approach is adopted in several national occupation classifications.  Typically such classifications also identify a number of military-specific occupational groups.  In many countries, however, it is not possible to produce information about the nature of the work performed by members of the armed forces.  In adapting ISCO-08 for national purposes countries may wish, therefore, to consider what approach best suits their circumstances and user needs.  For purposes of international comparability, however, where data pertaining to members of the armed forces are reported and classified by occupation, they should be included, where possible, in ISCO-08 Major Group 0: Armed Forces Occupations.
+",,2025-04-17 12:43:10.765,2025-04-17 12:43:10.765,
+2,"01",Commissioned armed forces officers,"Commissioned armed forces officers provide leadership and management to organizational units in the armed forces and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes all members of the armed forces holding the rank of second lieutenant (or equivalent) or higher. Competent performance in most occupations in this sub-major group requires skills at the fourth ISCO skill level.
+Occupations in this sub-major group are classified into the following minor group:
+011  Commissioned Armed Forces Officers
+Excluded from this group are:
+-  jobs held by persons in civilian employment of government establishments concerned with defence issues; 
+-  police (other than military police);
+-  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.768,2025-04-17 12:43:10.768,
+3,"011",Commissioned armed forces officers,"Commissioned armed forces officers provide leadership and management to organizational units in the armed forces and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes all members of the armed forces holding the rank of second lieutenant (or equivalent) or higher.
+Occupations in this minor group are classified into the following unit group:
+0110 Commissioned Armed Forces Officers
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.769,2025-04-17 12:43:10.769,
+4,"0110",Commissioned armed forces officers,"Commissioned armed forces officers provide leadership and management to organizational units in the armed forces and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes all members of the armed forces holding the rank of second lieutenant (or equivalent) or higher.
+Examples of the occupations classified here: 
+- Admiral
+- Air commodore
+- Air marshal
+- Brigadier (army)
+- Captain (air force)
+- Captain (army)
+- Captain (navy)
+- Colonel (army)
+- Field marshal
+- Flight lieutenant (air force)
+- Flying officer (military)
+- General (army)
+- Group captain, (air force)
+- Lieutenant (army)
+- Major (army)
+- Midshipman
+- Naval officer (military) 
+- Navy commander 
+- Officer cadet (armed forces)
+- Second lieutenant (army)
+- Squadron leader
+- Sublieutenant (navy)
+- Wing commander
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.770,2025-04-17 12:43:10.770,
+5,"02",Non-commissioned armed forces officers,"Non-commissioned armed forces officers enforce military discipline and supervise the activities of those employed in Sub-major Group 03: Armed Forces Occupations, Other Ranks, and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes members of the armed forces holding ranks such as sergeant, warrant officer and sergeant major.  Competent performance in most occupations in this sub-major group requires skills at the second ISCO skill level.
+Occupations in this sub-major group are classified into the following minor group:
+021  Non-commissioned Armed Forces Officers
+Excluded from this group are: 
+  -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+  -  police (other than military police);
+  - customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.771,2025-04-17 12:43:10.771,
+6,"021",Non-commissioned armed forces officers,"Non-commissioned armed forces officers enforce military discipline and supervise the activities of those employed in Sub-major  031: Armed Forces Occupations, Other Ranks, and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes members of the armed forces holding ranks such as sergeant, warrant officer and sergeant major.
+Occupations in this minor group are classified into the following unit group:
+0210  Non-commissioned Armed Forces Officers
+Excluded from this group are: 
+ - jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ - police (other than military police);
+ - customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.772,2025-04-17 12:43:10.772,
+7,"0210",Non-commissioned armed forces officers,"Non-commissioned armed forces officers enforce military discipline and supervise the activities of those employed in Sub-major Group 0310: Armed Forces Occupations, Other Ranks, and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. This group includes members of the armed forces holding ranks such as sergeant, warrant officer and sergeant major.
+Examples of the occupations classified here:
+- Boatswain (navy)
+- Flight sergeant
+- Sergeant (army)
+- Sergeant major
+- Warrant officer
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.772,2025-04-17 12:43:10.772,
+8,"03","Armed forces occupations, other ranks","Armed forces occupations, other ranks include all conscripted and non-conscripted members of the armed forces except commissioned and non-commissioned officers.  They perform specific military tasks and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces. Most occupations in this sub-major group require skills at the first ISCO skill level.
+Occupations in this sub-major group are classified into the following minor group:
+031  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.773,2025-04-17 12:43:10.773,
+9,"031","Armed forces occupations, other ranks","Armed forces occupations, other ranks include all conscripted and non-conscripted members of the armed forces except commissioned and non-commissioned officers.  They perform specific military tasks and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces.
+Occupations in this minor group are classified into the following unit group:
+0310  Armed Forces Occupations, Other Ranks
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.
+",,2025-04-17 12:43:10.774,2025-04-17 12:43:10.774,
+10,"0310","Armed forces occupations, other ranks","Armed forces occupations, other ranks include all conscripted and non-conscripted members of the armed forces except commissioned and non-commissioned officers.  They perform specific military tasks and/or perform similar tasks to those performed in a variety of civilian occupations outside the armed forces.
+Examples of the occupations classified here:
+- Airman
+- Bombardier
+- Corporal (air force)
+- Corporal (army)
+- Coxswain (navy)
+- Gunner
+- Infantryman/woman
+- Paratrooper
+- Rifleman/woman
+- Seaman/woman (navy)
+Excluded from this group are: 
+ -  jobs held by persons in civilian employment of government establishments concerned with defence issues;
+ -  police (other than military police);
+ -  customs inspectors and members of border or other armed civilian services.",,2025-04-17 12:43:10.775,2025-04-17 12:43:10.775,
+11,"1",Managers,"Managers plan, direct, coordinate and evaluate the overall activities of enterprises, governments and other organizations, or of organizational units within them, and formulate and review their policies, laws, rules and regulations. Competent performance in most occupations in this major group requires skills at the fourth ISCO skill level, except for Sub-major Group 14: Hospitality, Retail and Other Services Managers, for which skills at the third ISCO skill level are generally required. 
+Tasks performed by managers usually include: formulating and advising on the policy, budgets, laws and regulations of enterprises, governments and other organizational units; establishing objectives and standards and formulating and evaluating programmes and policies and procedures for their implementation; ensuring appropriate systems and procedures are developed and implemented to provide budgetary control; authorizing material, human and financial resources to implement policies and programmes; monitoring and evaluating performance of the organization or enterprise and of its staff; selecting or approving the selection of  staff;  ensuring compliance with health and safety requirements; planning and directing daily operations; representing and negotiating on behalf of the government, enterprise or organizational unit managed in meetings and other forums.
+Occupations in this major group are classified into the following sub-major groups:
+11 Chief Executives, Senior Officials and Legislators
+12 Administrative and Commercial Managers
+13 Production and Specialized Services Managers
+14 Hospitality, Retail and Other Services Managers
+Notes
+In distinguishing between managers classified in Major Group 1: Managers, and supervisors, classified in other major groups, it should be noted that both managers and supervisors may plan, organize, coordinate, control and direct the work done by others.  In addition, managers usually have responsibility for and make decisions about: the overall strategic and operational direction of a business or organizational unit (for example about the kinds, quantity and quality of goods to be produced); budgets (how much money is to be spent and for what purposes); and the selection, appointment and dismissal of staff.  Supervisors may provide advice and assistance to managers on these matters, especially in relation to staff selection and dismissal, but do not have authority to make decisions.
+It should be noted that it is not a necessary condition that managers have responsibility for all three of strategic and operational direction, budgets and staff selection and dismissal. The degree of autonomy they exercise may also vary. The critical difference is that supervisors are responsible only for the supervision of the activities of other workers, whereas managers have overall responsibility for the operations of an organizational unit.
+",,2025-04-17 12:43:10.777,2025-04-17 12:43:10.777,
+12,"11","Chief executives, senior officials and legislators","Chief executives, senior officials and legislators formulate and review the policies, and plan, direct, coordinate and evaluate the overall activities of enterprises, governments and other organizations with the support of other managers. Competent performance in most occupations in this sub-major group requires skills at the fourth ISCO skill level .
+Tasks performed by workers in this sub-major group usually include: presiding over or participating in the proceedings of legislative bodies, boards of directors and committees; formulating and advising on the policy budgets, laws and regulations of  enterprises, governments and other organizations; establishing objectives for enterprises, government departments or agencies and other organizations; formulating or approving and evaluating programmes and policies and procedures for their implementation; ensuring appropriate systems and procedures are developed and implemented to provide budgetary control; authorizing material, human and financial resources to implement policies and programmes; monitoring and evaluating performance of the organization or enterprise; selecting or approving the selection of senior staff; performing ceremonial duties and representing the enterprise, government, organization or community at official occasions and in meetings, negotiations, conventions and public hearings.
+Occupations in this sub-major group are classified into the following minor groups:
+111 Legislators and Senior Officials
+112 Managing Directors and Chief Executives
+",,2025-04-17 12:43:10.777,2025-04-17 12:43:10.777,
+13,"111",Legislators and senior officials,"Legislators and senior officials determine, formulate, advise on and direct the implementation of policies of national, state, regional or local governments or communities, and of special-interest organizations. They  make, ratify, amend or repeal laws, public rules and regulations, and  plan, organize, direct, control and evaluate the overall activities of government departments and agencies, traditional communities and special-interest organizations.
+Tasks performed usually include: presiding over or participating in the proceedings of legislative bodies and administrative councils of governments, legislative assemblies, local communities and special-interest organizations; serving on government administrative boards or official committees; investigating matters of concern to the public and promoting the interests of constituents; formulating and  advising on government policy, budgets, laws and regulations; establishing objectives for organizations and formulating or approving and evaluating programmes and policies and procedures for their implementation; recommending, reviewing, evaluating and approving documents, briefs and reports submitted; ensuring appropriate systems and procedures are developed and implemented to provide budgetary control; allocating the use of communal land and other resources; performing ceremonial duties and representing the government, organization or community at official occasions and in meetings, negotiations, conventions and public hearings.
+Occupations in this minor group are classified into the following unit groups:
+1111 Legislators
+1112 Senior Government Officials
+1113 Traditional Chiefs and Heads of Villages
+1114 Senior Officials of Special-interest Organizations
+",,2025-04-17 12:43:10.778,2025-04-17 12:43:10.778,
+29,"1223",Research and development managers,"Research and development managers plan, direct and coordinate the research and development activities of an enterprise or organization or of enterprises that provide related services to other enterprises and organizations.
+Tasks include -
+(a)   planning, directing and coordinating research and development activities, in-house or commissioned from external research organizations, to develop new or improved technical processes, products, knowledge, or utilization of materials;
+(b)   planning the overall research and development programme of an enterprise or organization, specifying goals and budgetary requirements;
+(c)   leading and managing the activities of research and development staff;
+(d)   establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(e)   establishing and directing operational and administrative procedures;
+(f)   planning and directing daily operations;
+(g)  overseeing the selection, training and performance of staff;
+(h)   representing the enterprise or organization at conventions, seminars and conferences.
+Examples of the occupations classified here:
+-  Product development manager
+-  Research manager
+",,2025-04-17 12:43:10.790,2025-04-17 12:43:10.790,
+14,"1111",Legislators,"Legislators determine, formulate and direct policies of national, state, regional or local governments and international governmental agencies, and make, ratify, amend or repeal laws, public rules and regulations. They include elected and non-elected members of parliaments, councils and governments.
+Tasks include -
+(a)  presiding over or participating in the proceedings of legislative bodies and administrative councils of national, state, regional or local governments or legislative assemblies;
+(b)  determining, formulating and directing policies of national, state, regional or local governments;
+(c)  making, ratifying, amending or repealing laws, public rules and regulations within a statutory or constitutional framework;
+(d)  serving on government administrative boards or official committees;
+(e)  investigating matters of concern to the public and promoting the interests of the constituencies which they represent;
+(f)  attending community functions and meetings to provide service to the community, understand public opinion and provide information on government plans;
+(g)  negotiating with other legislators and representatives of interest groups in order to reconcile differing interests, and to create policies and agreements;
+(h)  as members of the government, directing senior administrators and officials of government departments and agencies in the interpretation and implementation of government policies.
+Examples of the occupations classified here:
+-  City councillor
+-  Government minister
+-  Mayor
+-  Member of parliament
+-  President (government)
+-  Secretary of state
+-  Senator
+-  State governor
+",,2025-04-17 12:43:10.779,2025-04-17 12:43:10.779,
+15,"1112",Senior government officials,"Senior government officials advise governments on policy matters, oversee the interpretation and implementation of government policies and legislation by government departments and agencies, represent their country abroad and act on its behalf, or carry out similar tasks in intergovernmental organizations. They plan, organize, direct, control and evaluate the overall activities of municipal or local, regional and national government departments, boards, agencies or commissions in accordance with legislation and policies established by government and legislative bodies.
+Tasks include -
+(a)  advising national, state, regional or local governments and legislators on policy matters;
+(b)  advising on the preparation of government budgets, laws and regulations, including amendments;
+(c)  establishing objectives for government departments or agencies in accordance with government legislation and policy;
+(d)  formulating or approving and evaluating programmes and procedures for the implementation of government policies in conjunction or consultation with government,
+(e)  recommending, reviewing, evaluating and approving documents, briefs and reports submitted by middle managers and senior staff members;
+(f)  ensuring appropriate systems and procedures are developed and implemented to provide budgetary control;
+(g)  coordinating activities with other senior government managers and officials;
+(h)  making presentations to legislative and other government committees regarding policies, programmes or budgets;
+(i)  overseeing the interpretation and implementation of government policies and legislation by government departments and agencies.
+Examples of the occupations classified here:
+-  Ambassador
+-  City administrator
+-  Civil service commissioner
+-  Consul-general
+-  Director-general (government department)
+-  Director-general (intergovernmental organization)
+-  Fire commissioner
+-  Inspector-general (police)
+-  Permanent head (government department)
+-  Police chief constable
+-  Police commissioner
+-  Secretary-general (government administration)
+-  Under-secretary (government)
+
+
+Note
+Chief executives of government-owned enterprises are included in Unit Group 1120: Managing Directors and Chief Executives.
+",,2025-04-17 12:43:10.780,2025-04-17 12:43:10.780,
+16,"1113",Traditional chiefs and heads of village,"Traditional chiefs and heads of villages perform a variety of legislative, administrative and ceremonial tasks and duties, determined by ancient traditions as well as by the division of rights and responsibilities between village chiefs and the local, regional and national authorities.
+Tasks include -
+(a)  allocating the use of communal land and other resources among households in the community or village;
+(b)  collecting and distributing surplus production of the community or village;
+(c)  settling disputes between members of the community or village;
+(d)  disciplining members of the community or village for violation of rules and customs;
+(e)  performing ceremonial duties in connection with births, marriages, deaths, harvests and other important occasions;
+(f)  representing the community or village on local or regional councils;
+(g)  informing the community or village about government rules and regulations.
+Examples of the occupations classified here:
+-  Village chief
+-  Village head
+",,2025-04-17 12:43:10.780,2025-04-17 12:43:10.780,
+17,"1114",Senior officials of special-interest organisations,"Senior officials of special-interest organizations determine, formulate and direct the implementation of policies of special-interest organizations, such as political-party organizations, trade unions, employers’ organizations, trade and industry associations, humanitarian or charity organizations, or sports associations, and represent their organizations and act on their behalf.
+Tasks include -
+(a)  determining and formulating the policies, rules and regulations of the organization;
+(b)  planning, directing and coordinating the general functioning of the organization;
+(c)  reviewing the operations and results of the organization and reporting to boards of directors and governing bodies, the organization’s membership and funding agencies;
+(d)  negotiating on behalf of the organization, its members and relevant special-interest groups; 
+(e)  promoting the interests of the organization, its members and relevant special-interest groups before the legislature, government or general public; 
+(f)  planning, organizing and directing sections charged with implementing the organization's policies, programmes, rules and regulations;
+(g)   ensuring appropriate systems and procedures are developed and implemented to provide budgetary control;
+(h)   monitoring and evaluating performance of the organization or enterprise against established objectives and policies;
+(i)   representing the organization at official occasions and board meetings, in negotiations and at conventions, public hearings and forums.
+Examples of the occupations classified here:
+-  Chairperson, trade union
+-  Director-general, employers’ organization
+-  Leader, political party
+-  President, political party
+-  Secretary-general, environment protection organization
+-  Secretary-general, human rights organization
+",,2025-04-17 12:43:10.781,2025-04-17 12:43:10.781,
+18,"112",Managing directors and chief executives,"Managing directors and chief executives formulate and review the policies, and plan, direct, coordinate and evaluate the overall activities, of enterprises or organizations (except special-interest organizations and government departments) with the support of other managers, usually within guidelines established by a board of directors or a governing body to whom they are answerable for the operations undertaken and results.
+Tasks performed usually include: planning, directing and coordinating the general functioning of an enterprise or organization; reviewing the operations and results of the enterprise or organization, and reporting to boards of directors and governing bodies; determining objectives, strategies, policies and programmes for the enterprise or organization; providing overall direction and management to organizations; establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources; authorizing material, human and financial resources to implement organizational policies and programmes; monitoring and evaluating performance of the organization or enterprise against established objectives and policies; consulting with senior subordinate staff and reviewing recommendations and reports; representing the organization at official occasions, in negotiations and at conventions, seminars, public hearings and forums; selecting or approving the selection of senior staff; ensuring the organization complies with relevant legislation and regulations.
+Occupations in this minor group are classified into the following unit group:
+1120  Managing Directors and Chief Executives",,2025-04-17 12:43:10.782,2025-04-17 12:43:10.782,
+19,"1120",Managing directors and chief executives,"Managing directors and chief executives formulate and review the policies, and plan, direct, coordinate and evaluate the overall activities, of enterprises or organizations (except special-interest organizations and government departments) with the support of other managers, usually within guidelines established by a board of directors or a governing body to whom they are answerable for the operations undertaken and results.
+Tasks include -
+(a) planning, directing and coordinating the general functioning of an enterprise or organization;
+(b) reviewing the operations and results of the enterprise or organization and reporting to boards of directors and governing bodies;
+(c) determining objectives, strategies, policies and programmes for the enterprise or organization;
+(d) providing overall leadership and management to the enterprise or organization;
+(e) establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(f) authorizing material, human and financial resources to implement organizational policies and programmes;
+(g) monitoring and evaluating performance of the organization or enterprise against established objectives and policies;
+(h) consulting with senior subordinate staff and reviewing recommendations and reports;
+(i) representing the organization at official occasions and board meetings, in negotiations and at conventions, seminars, public hearings and forums; 
+(j) selecting or approving the selection of senior staff;
+(k) ensuring the organization complies with relevant legislation and regulations.
+Examples of the occupations classified here:
+-  Chief executive
+-  Managing director
+-  Regional manager
+
+Note
+Regional managers and other senior managers who coordinate and supervise the activities of subordinate managers who have a diverse range of functional responsibilities are included in Unit Group 1120: Managing Directors and Chief Executives. Managers responsible for specialized functions within a specific geographic area are excluded from this unit group. For example, regional sales managers are classified in Unit Group 1221: Sales and Marketing Managers. Jobs whose principal responsibility is to participate as a member of the board of directors of one or more enterprises or organizations are included in Unit Group 1120: Managing Directors and Chief Executives. Chief executives of government-owned enterprises are included in Unit Group 1120: Managing Directors and Chief Executives.
+",,2025-04-17 12:43:10.783,2025-04-17 12:43:10.783,
+20,"12",Administrative and commercial managers,"Administrative and commercial managers plan, organize, direct, control and coordinate the financial, administrative, human resource, policy, planning, research and development, advertising, public relations, and sales and marketing activities of enterprises and organizations, or of enterprises that provide such services to other enterprises and organizations. Competent performance in most occupations in this sub-major group requires skills at the fourth ISCO skill level
+Tasks performed by workers in this sub-major group usually include: formulating and administering policy advice and strategic and financial planning; establishing and directing operational and administrative procedures; implementing, monitoring and evaluating strategies and policies; providing advice to senior managers; directing the development of initiatives for new products, marketing, public relations and advertising campaigns; determining and directing sales activities, product mix and customer service standards; setting prices and credit arrangements; ensuring compliance with relevant legislation, regulations and standards; controlling selection, training and performance of staff; preparing budgets and overseeing financial operations; consulting with the chief executive and with managers of other departments or sections; controlling expenditure and ensuring the efficient use of resources; representing the enterprise or organization in negotiations, and at conventions, seminars, public hearings and forums.
+Occupations in this sub-major group are classified into the following minor groups:
+121 Business Services and Administration Managers
+122 Sales, Marketing and Development Managers
+Notes
+Specialized qualifications and extensive experience relevant to one or more occupations classified in Major Group 2: Professionals, or Major Group 3: Technicians and Associate Professionals, are usually required. Regional managers and other senior managers who coordinate and supervise the activities of subordinate managers who have a diverse range of functional responsibilities are included in Unit Group 1120:  Managing Directors and Chief Executives.
+",,2025-04-17 12:43:10.784,2025-04-17 12:43:10.784,
+21,"121",Business services and administration managers,"Business services and administration managers plan, organize, direct, control and coordinate the financial, administrative, human resource, policy and planning activities of organizations, or of enterprises that provide such services to other enterprises and organizations.
+Tasks performed usually include: formulating and administering policy advice. and strategic and financial planning; establishing and directing operational and administrative procedures; implementing, monitoring and evaluating strategies and policies; providing advice to senior managers and board members on financial, administrative, strategic, policy, programme and legislative issues; ensuring compliance with relevant legislation, regulations and standards; controlling selection, training and performance of staff; preparing budgets and overseeing financial operations; consulting with the chief executive and with managers of other departments or sections; controlling expenditure and ensuring the efficient use of resources; representing the organization in negotiations, and at conventions, seminars, public hearings and forums.
+Occupations in this minor group are classified into the following unit groups:
+1211 Finance Managers
+1212 Human Resource Managers
+1213 Policy and Planning Managers
+1219 Business Services and Administration Managers Not Elsewhere Classified
+",,2025-04-17 12:43:10.784,2025-04-17 12:43:10.784,
+22,"1211",Finance managers,"Finance managers plan, direct and coordinate the financial operations of an enterprise or organization, in consultation with senior managers and with managers of other departments or sections, or of enterprises that provide financial services to other enterprises and organizations.
+Tasks include -
+(a)  planning, directing and coordinating the financial operations of an enterprise or organization;
+(b)  assessing the financial situation of the enterprise or organization, preparing budgets and overseeing financial operations;
+(c)  consulting with the chief executive and with managers of other departments or sections;
+(d)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(e)  establishing and directing operational and administrative procedures;
+(f)  planning and directing daily operations;
+(g)  overseeing the selection, training and performance of staff;
+(h)  representing the enterprise or organization in dealings with outside bodies.
+Examples of the occupations classified here:
+-  Company secretary
+-  Finance manager
+Some related occupations classified elsewhere:
+-  Financial institution branch manager - 1346
+-  Financial controller - 2411
+-  Management accountant - 2411
+",,2025-04-17 12:43:10.785,2025-04-17 12:43:10.785,
+23,"1212",Human resource managers,"Human resource managers plan, direct and coordinate policies concerning the personnel, industrial relations and occupational health and safety activities of an enterprise or organization, or of enterprises that provide human resource services to other enterprises and organizations.
+Tasks include -
+(a)  planning, directing and coordinating the personnel and industrial relations activities, policies and practices of an enterprise or organization;
+(b)  planning and organizing procedures for recruitment, training, promotion, transfer and dismissal of staff;
+(c)  planning and organizing negotiations and procedures for determination of wage structures and level and for consultation with workers on conditions of employment;
+(d)  overseeing safety, health and related programmes and activities;
+(e)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(f)  establishing and directing operational and administrative procedures;
+(g)  overseeing the development and implementation of management information systems;
+(h)  ensuring compliance with standards and legislation relating to employees’ rights, health and safety, equal opportunity and related concerns;
+(i)  overseeing the selection, training and performance of staff for the entire enterprise or organization;
+(j)  consulting with senior management and with managers of other departments;
+(k)  representing the enterprise or organization in dealings with outside bodies.
+Examples of the occupations classified here:
+-  Industrial relations manager
+-  Personnel manager 
+-  Recruitment manager
+",,2025-04-17 12:43:10.786,2025-04-17 12:43:10.786,
+315,"4226",Receptionists (general),"Receptionists (general) receive and welcome visitors, clients, or guests and respond to inquiries and requests including arranging for appointments.
+Tasks include -
+(a)  receiving and welcoming visitors, guests or clients;
+(b)  making appointments for clients;
+(c)  dealing with telephone requests for information or appointments;
+(d)  directing clients to appropriate location or person;
+(e)  supplying information pamphlets, brochures or forms.
+Examples of the occupations classified here:
+- Medical office receptionist
+- Receptionist
+Some related occupations classified elsewhere:
+- Medical secretary - 3344
+- Hotel receptionist - 4224
+",,2025-04-17 12:43:11.025,2025-04-17 12:43:11.025,
+24,"1213",Policy and planning managers,"Policy and planning managers plan, organize, direct and coordinate policy advice and strategic planning activities within government or for non-government organizations and private sector agencies, or manage the activities of enterprises that provide policy and strategic planning services.
+Tasks include - 
+(a)  developing, implementing and monitoring strategic plans, programmes, policies, processes, systems and procedures to achieve goals, objectives and work standards; 
+(b)  developing, directing, administering and participating in policy research and analysis;
+(c)  coordinating the implementation of policies and practices; 
+(d)  establishing activity measures and measurements of accountability;
+(e)  planning and directing daily operations;
+(f)  leading and managing the activities of policy development and strategic planning staff;
+(g)  overseeing the selection, training and performance of staff; 
+(h)  consulting with senior management and with managers of other departments;
+(i)  representing the enterprise or organization in negotiations, and at conventions, seminars, public hearings and forums.
+Examples of the occupations classified here:
+-  Corporate planning manager
+-  Policy manager
+-  Strategic planning manager
+",,2025-04-17 12:43:10.787,2025-04-17 12:43:10.787,
+25,"1219",Business services and administration managers not elsewhere classified,"This unit group covers business services and administration managers not classified elsewhere in Minor Group 121: Business Services and Administration Managers. For instance, the group includes occupations such as facilities manager, cleaning services manager and administrative services manager employed either as the manager of a department of a large enterprise and organization, or of an enterprise that provides such services to other enterprises and organizations.
+In such cases tasks would include -
+(a)  providing administrative, strategic planning and operational support, research and advice to senior management on matters such as the management of building facilities and administrative services;
+(b)  developing and managing the organization’s administrative and physical resources;
+(c)  developing and implementing administrative and procedural statements and guidelines for use by staff in the organization; 
+(d)  analysing complex resource management issues and initiatives that affect the organization, and  preparing associated reports, correspondence and submissions;
+(e)  providing information and support for the preparation of financial reports and budgets;
+(f)  leading, managing and developing administrative staff to ensure smooth business operations and the provision of accurate and timely information;
+(g)  representing the enterprise or organization in negotiations, and at conventions, seminars, public hearings and forums;
+(h)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(i)  planning and directing daily operations;
+(j)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+-  Administrative services manager
+-  Cleaning services manager
+-  Corporate services manager
+-  Facilities manager 
+",,2025-04-17 12:43:10.787,2025-04-17 12:43:10.787,
+26,"122","Sales, marketing and development managers","Sales, marketing and development managers plan, organize, direct, control and coordinate the advertising, public relations, research and development, and sales and marketing activities of enterprises and organizations, or of enterprises that provide such services to other enterprises and organizations.
+Tasks performed usually include: formulating and implementing policies and plans for advertising, public relations, product development, sales and marketing in consultation with other managers; directing the development of initiatives for new products or scientific research, marketing, public relations and advertising campaigns; determining and directing sales activities, product mix, customer service standards and merchandising methods and distribution policy; setting prices and credit arrangements; establishing and managing budgets and controlling expenditure to ensure the efficient use of resources; overseeing the selection, training and performance of staff; representing the enterprise or organization at conventions, trade exhibitions and other forums.
+Occupations in this minor group are classified into the following unit groups:
+1221 Sales and Marketing Managers
+1222 Advertising and Public Relations Managers 
+1223 Research and Development Managers
+",,2025-04-17 12:43:10.788,2025-04-17 12:43:10.788,
+27,"1221",Sales and marketing managers,"Sales and marketing managers plan, direct and coordinate the sales and marketing activities of an enterprise or organization, or of enterprises that provide sales and marketing services to other enterprises and organizations.
+Tasks include -
+(a)  planning and organizing special sales and marketing programmes based on sales records and market assessments;
+(b)  determining price lists, discount and delivery terms, sales promotion budgets, sales methods, special incentives and campaigns;
+(c)  establishing and directing operational and administrative procedures related to sales and marketing activities;
+(d)  leading and managing the activities of sales and marketing staff;
+(e)  planning and directing daily operations; 
+(f)  establishing and managing budgets and controlling expenditure to ensure the efficient use of resources;
+(g)  overseeing the selection, training and performance of staff;
+(h)  representing the enterprise or organization at sales and marketing conventions, trade exhibitions and other forums.
+Examples of the occupations classified here:
+-  Marketing manager
+-  Sales manager
+",,2025-04-17 12:43:10.789,2025-04-17 12:43:10.789,
+28,"1222",Advertising and public relations managers,"Advertising and public relations managers plan, direct and coordinate the advertising, public relations and public information activities of enterprises and organizations or of enterprises that provide related services to other enterprises and organizations.
+Tasks include -
+(a)  planning, directing and coordinating the advertising and public relations activities of an enterprise or organization;
+(b)  negotiating advertising contracts with clients or with newspapers, radio and television stations, sports and cultural organizations and advertising agencies;
+(c)  planning and managing information programmes to inform legislators, the mass media and the general public about the plans, accomplishments and points of view of the enterprise or organization;
+(d)  leading and managing the activities of advertising and public relations staff;
+(e)  establishing and managing budgets and controlling expenditure and ensuring the efficient use of resources;
+(f)  establishing and directing operational and administrative procedures;
+(g)  planning and directing daily operations;
+(h)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+-  Advertising manager
+-  Public relations manager
+",,2025-04-17 12:43:10.790,2025-04-17 12:43:10.790,
+316,"4227",Survey and market research interviewers,"Survey and market research interviewers interview people and record their responses to survey and market research questions on a range of topics.
+Tasks include -
+(a)  contacting individuals by telephone or in person and explaining the purpose of the interview;
+(b)  asking questions following the outlines of questionnaires and surveys;
+(c)  recording responses on paper or entering responses directly into a computer database through computer-assisted interviewing systems;
+(d)  identifying and resolving inconsistencies in responses;
+(e)  providing feedback to survey sponsors concerning problems in obtaining valid data.
+Examples of the occupations classified here:
+- Market research interviewer 
+- Public opinion interviewer 
+- Survey interviewer
+",,2025-04-17 12:43:11.026,2025-04-17 12:43:11.026,
+30,"13",Production and specialised services managers,"Production and specialized services managers plan, direct and coordinate the production of the goods and the provision of the specialized professional and technical services provided by an enterprise or organization, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.  They are responsible for manufacturing, mining, construction, logistics, information and communications technology operations for large-scale agricultural, forestry and fisheries operations, and for the provision of health, education, social welfare, banking, insurance and other professional and technical services. Competent performance in most occupations in this sub-major group requires skills at the fourth ISCO skill level.
+Tasks performed by workers in this sub-major group usually include: planning details of activities in terms of output, services provided, quality, quantity, cost, timeliness and labour requirements; setting standards and objectives; controlling the operation of plant and of procedures; assuring quality of the goods produced and services provided; preparing tenders and contract bids; establishing and managing budgets, monitoring costs, and adjusting activities, procedures and resources to minimize costs; overseeing the acquisition and installation of new plant and equipment; coordinating the implementation of health and safety requirements; planning and directing daily operations; overseeing the selection, training and performance of staff; preparing, or arranging for the preparation of, reports, budgets and forecasts; representing the enterprise or organization in negotiations with other agencies, and at conventions, seminars, public hearings and forums.
+Occupations in this sub-major group are classified into the following minor groups:
+131 Production Managers in Agriculture, Forestry and Fisheries
+132 Manufacturing, Mining, Construction and Distribution Managers
+133 Information and Communications Technology Services Managers
+134 Professional Services Managers
+Note
+Specialized qualifications and extensive experience relevant to one or more occupations classified in Major Group 2: Professionals, or Major Group 3: Technicians and Associate Professionals, are usually required.  Regional managers and other senior managers who coordinate and supervise the activities of subordinate managers who have a diverse range of functional responsibilities are included in Unit Group 1120:  Managing Directors and Chief Executives.
+",,2025-04-17 12:43:10.791,2025-04-17 12:43:10.791,
+31,"131","Production managers in agriculture, forestry and fisheries","Production managers in agriculture, forestry and fisheries plan, direct and coordinate production in large-scale agricultural, horticultural, forestry aquaculture and fishery operations such as plantations, large ranches, collective farms and cooperatives, to grow and harvest crops, breed and raise livestock, fish and shellfish and to catch and harvest fish and other forms of aquatic life.
+Tasks performed usually include: monitoring market activity and planning production to meet contract requirements and market demand; establishing and managing budgets, monitoring production output and costs, recording information such as farm and fisheries management practices, and preparing financial and operational reports; conferring with buyers to arrange for the sale of crops, catch and stock;  contracting with farmers, skippers or independent owners for production of produce and  management of production; planning the type, intensity and sequence of operations; purchasing machinery, equipment and supplies; identifying and controlling environmental toxins, weeds, pests and diseases; organizing operations such as maintaining buildings, water supply systems and equipment; overseeing the selection, training and performance of workers and contractors.
+Occupations in this minor group are classified into the following unit groups:
+1311 Agricultural and Forestry Production Managers
+1312 Aquaculture and Fisheries Production Managers
+",,2025-04-17 12:43:10.792,2025-04-17 12:43:10.792,
+32,"1311",Agricultural and forestry production managers,"Agricultural and forestry production managers plan, direct and coordinate production in large-scale agricultural, horticultural and forestry operations such as plantations, large ranches, collective farms and agricultural cooperatives to grow and harvest crops, and breed and raise livestock.
+Tasks include -
+(a) monitoring agricultural and forestry market activity and planning production to meet contract requirements and market demand;
+(b) establishing and managing budgets, monitoring production output and costs, recording information such as farm management practices, and preparing financial and operational reports;
+(c) conferring with buyers to arrange for the sale of crops and livestock;
+(d) contracting with farmers or independent owners for production of crops and livestock, or for management of production;
+(e) planning the type, intensity and sequence of farm operations (e.g. determining the best times for planting, spraying and harvesting);
+(f) analysing soil to determine types and quantities of fertilizer required for maximum production;
+(g) purchasing machinery, equipment and supplies such as tractors, seed, fertilizer and chemicals;
+(h) identifying and controlling agricultural and forest environmental toxins, weeds, pests and diseases;
+(i) organizing farming operations such as maintaining buildings, water supply systems and equipment;
+(j) directing and coordinating activities such as planting, irrigation, chemical application, harvesting and grading; 
+(k) inspecting plantations and fields to determine maturity dates of crops, or to estimate potential crop damage from weather;
+ (l) overseeing the selection, training and performance of agricultural and forestry workers and contractors.
+Examples of the occupations classified here:
+-  Forestry manager
+-  Plantation manager
+-  Ranch manager
+",,2025-04-17 12:43:10.793,2025-04-17 12:43:10.793,
+33,"1312",Aquaculture and fisheries production managers,"Aquaculture and fisheries production managers plan, direct and coordinate production in large-scale aquaculture and fishery operations to catch and harvest fish and shellfish, and to grow fish, shellfish or other forms of aquatic life as cash crops or for release into freshwater or saltwater.
+Tasks include -
+(a)  monitoring aquaculture and fishery market activity and planning production and fishing activities to meet contract requirements and market demand;
+(b)  establishing and managing budgets, monitoring production output and costs, recording information such as fisheries management practices, and preparing financial and operational reports; 
+(c)  conferring with buyers to arrange for the sale of produce and catches;
+(d)  contracting with fishing skippers or owners of vessels and aquaculture farms for fishing and aquaculture operations, or for management of production;
+(e)  conducting and organizing aquaculture or fishery stock examinations in order to identify diseases or parasites;
+(f)  devising and coordinating activities to improve fish hatching and growth rates, and to prevent disease in hatcheries;
+(g)  monitoring environments to maintain or improve conditions for aquatic life;
+(h)  directing and monitoring trapping and spawning of fish, egg incubation and fry rearing, applying knowledge of management and fish culturing techniques;
+(i)  coordinating the selection and maintenance of brood stock;
+(j)  directing and monitoring the transfer of mature fish to lakes, ponds, streams or commercial tanks;
+(k)  purchasing machinery, equipment and supplies such as vessels and nets;
+(l)  organizing operations such as maintenance of ships, boats and equipment;
+(m) overseeing the selection, training and performance of aquaculture or fishery workers and contractors.
+Examples of the occupations classified here:
+-  Aquaculture production manager
+-  Fishing operations manager
+-  Shore captain (fishing)
+-  Trawler manager
+Some related occupations classified elsewhere:
+-  Fish farmer - 6221
+-  Fish hatchery manager - 6221
+-  Oyster farmer - 6221
+-  Seafood farmer - 6221
+-  Fishing vessel skipper (coastal waters) - 6222
+-  Fishing master (deep sea) - 6223
+",,2025-04-17 12:43:10.794,2025-04-17 12:43:10.794,
+34,"132","Manufacturing, mining, construction, and distribution managers","Manufacturing, mining, construction and distribution managers plan, organize and coordinate the manufacturing, mineral extraction, construction, supply, storage and transportation operations, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.
+Tasks performed usually include: planning details of activities in terms of output quality and quantity, cost, timeliness and labour requirements; controlling the operation of plant and quality procedures through planning of maintenance, designation of operating hours and supply of equipment; preparing tenders and contract bids; establishing and managing budgets, monitoring production output and costs, and adjusting processes and resources to minimize costs; overseeing the acquisition and installation of new plant and equipment; controlling the preparation of production records and reports; coordinating the implementation of health and safety requirements; planning and directing daily operations; overseeing the selection, training and performance of staff.
+Occupations in this minor group are classified into the following unit groups:
+1321 Manufacturing Managers
+1322 Mining Managers
+1323 Construction Managers
+1324 Supply, Distribution and Related Managers
+",,2025-04-17 12:43:10.794,2025-04-17 12:43:10.794,
+35,"1321",Manufacturing managers,"Manufacturing managers plan, direct and coordinate activities concerned with the production of goods, the production and distribution of electricity, gas and water, and the collection, treatment and disposal of waste.  They may manage the production departments of large enterprises or be the managers of small manufacturing companies. 
+Tasks include -
+(a)  determining, implementing and monitoring production strategies, policies and plans; 
+(b)  planning details of production activities in terms of output quality and quantity, cost, time available and labour requirements;
+(c)  controlling the operation of production plant and quality procedures through planning of maintenance, designation of operating hours and supply of parts and tools;
+(d)  establishing and managing budgets, monitoring production output and costs, and adjusting processes and resources to minimize costs;
+(e)  consulting with and informing other managers about production matters;
+(f)  overseeing the acquisition and installation of new plant and equipment; 
+(g)  controlling the preparation of production records and reports;
+(h)  coordinating the implementation of occupational health and safety requirements;
+(i)   identifying business opportunities and determining products to be manufactured;
+(j)   researching and implementing regulatory and statutory requirements affecting manufacturing operations and the environment;
+(k)  overseeing the provision of quotations for the manufacture of specialized goods and establishing contracts with customers and suppliers;
+(l)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+-  Manufacturer
+-  Manufacturing manager
+-  Production and operations manager (manufacturing)
+Some related occupations classified elsewhere:
+-  Production supervisor (manufacturing) - 3122
+",,2025-04-17 12:43:10.795,2025-04-17 12:43:10.795,
+36,"1322",Mining managers,"Mining managers plan, direct and coordinate the production activities of mining, quarrying and oil and gas extraction operations, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.
+Tasks include -
+(a)  conferring with other managers to set production quotas, plan extraction sites and develop policies for the removal of raw materials;
+(b)  evaluating efficiency of production sites to determine adequacy of personnel, equipment and technologies used, and make changes to work schedules or equipment when necessary;
+(c)  planning details of production activities in terms of output quality and quantity, cost, time available and labour requirements;
+(d)  controlling the operation of plant and quality procedures through planning of maintenance, designation of operating hours and supply of equipment;
+(e)  establishing and managing budgets, monitoring production output and costs, and adjusting processes and resources to minimize costs;
+(f)  overseeing the acquisition and installation of new plant and equipment; 
+(g)  controlling the preparation of production records and reports;
+(h)  coordinating the implementation of health and safety requirements;
+(i)  researching and implementing regulatory and statutory requirements affecting mineral extraction operations and the environment;
+(j)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+-  Mine manager
+-  Production manager (mine)
+-  Production manager (oil and gas extraction)
+-  Production manager (quarry)
+-  Quarry manager
+Some related occupations classified elsewhere:
+-  Mine deputy - 3121
+-  Mine supervisor - 3121
+-  Mine under-manager - 3121
+-  Quarry supervisor - 3121
+",,2025-04-17 12:43:10.796,2025-04-17 12:43:10.796,
+37,"1323",Construction managers,"Construction managers plan, direct and coordinate the construction of civil engineering projects, buildings and dwellings, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.
+Tasks include - 
+(a)  interpreting architectural drawings and specifications;
+(b)  coordinating labour resources and procurement and delivery of materials, plant and equipment; 
+(c)  negotiating with building owners, property developers and subcontractors involved in the construction process to ensure projects are completed on time and within budget;
+(d)  preparing tenders and contract bids; 
+(e)  operating and implementing coordinated work programmes for sites; 
+(f)  ensuring adherence to building legislation and standards of performance, quality, cost and safety;
+(g)  arranging submission of plans to local authorities; 
+(h)  building under contract, or subcontracting specialized building services;
+(i)  arranging building inspections by relevant authorities;
+(j)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(k)  overseeing the selection, training and performance of staff and subcontractors.
+Examples of the occupations classified here:
+-  Civil engineering project manager
+-  Construction project manager 
+-  Project builder
+Some related occupations classified elsewhere:
+-  Building construction supervisor - 3123
+-  House builder - 7111
+",,2025-04-17 12:43:10.797,2025-04-17 12:43:10.797,
+38,"1324","Supply, distribution and related managers","Supply, distribution and related managers plan, direct and coordinate passenger transportation systems and facilities and the supply, transportation, storage and distribution of goods, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.
+Tasks include - 
+(a)  determining, implementing and monitoring purchasing, storage and distribution strategies, policies and plans; 
+(b)  preparing and implementing plans to maintain required stock levels at minimum cost; 
+(c)  negotiating contracts with suppliers to meet quality, cost and delivery requirements; 
+(d)  monitoring and reviewing storage and inventory systems to meet supply requirements, and control stock levels; 
+(e)  overseeing the dispatch of road vehicles, trains, vessels or aircraft;
+(f)  operating recording systems to track all movements of goods, and ensuring reordering and restocking at optimal times;
+(g)  liaising with other departments and customers concerning requirements for outward goods and associated forwarding transportation;
+(h)  overseeing the recording of purchase, storage and distribution transactions;
+(i)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(j)  establishing and directing operational and administrative procedures; 
+(k)  planning and directing daily operations;
+(l)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+-  Bus station manager 
+-  Logistics manager 
+-  Purchasing manager
+-  Railway station manager
+-  Railway station master
+-  Supply and distribution manager
+-  Supply chain manager
+-  Transport company manager
+-  Urban transit system manager
+-  Warehouse manager
+Note
+Chief executives of major airports, railway companies, urban transit systems and other transportation corporations that have hierarchies of managers are included in Unit Group 1120: Managing Directors and Chief Executives.
+",,2025-04-17 12:43:10.797,2025-04-17 12:43:10.797,
+57,"1439",Services managers not elsewhere classified,"This unit group covers managers that plan, direct and coordinate the provision of services and are not classified in Sub-major Group 13: Production and Specialized Services Managers or elsewhere in Sub-major Group 14: Hospitality, Retail and Other Services Managers. For instance, managers of travel agencies, conference centres, contact centres and shopping centres are classified here.
+Examples of the occupations classified here:
+-  Camp site manager
+-  Caravan park manager
+-  Conference centre manager 
+-  Contact centre manager
+-  Shopping centre manager
+-  Travel agency manager
+Note
+Excluded from this unit group are occupations that involve managing the provision of specialized professional and technical services and require specialized qualifications and experience relevant to one or more occupations classified in Major Group 2:  Professionals or in Major Group 3: Technicians and Associate Professionals. These managerial occupations are classified in various unit groups in Sub-major Groups 12: Administrative and Commercial Managers and 13: Production and Specialized Services Managers.
+",,2025-04-17 12:43:10.812,2025-04-17 12:43:10.812,
+39,"133",Information and communications technology service managers,"Information and communications technology services managers plan, direct and coordinate the acquisition, development, maintenance and use of computer and telecommunication systems, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.
+Tasks performed usually include: consulting with users, management, vendors and technicians to assess computing needs and system requirements, and specifying technology to meet those needs; formulating and directing information and communication technology (ICT) strategies, policies and plans; directing the selection and installation of ICT resources and the provision of user training; directing ICT operations, analysing workflow, establishing priorities, developing standards and setting deadlines; overseeing the security of ICT systems; assigning, reviewing, managing and leading the work of systems analysts, programmers and other computer-related workers; evaluating the organization’s technology use and needs and recommending improvements such as hardware and software upgrades; establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources; establishing and directing operational and administrative procedures; overseeing the selection, training and performance of staff; representing the enterprise or organization at ICT-related conventions, seminars and conferences.
+Occupations in this minor group are classified into the following unit group:
+1330 Information and Communications Technology Services Managers
+",,2025-04-17 12:43:10.798,2025-04-17 12:43:10.798,
+40,"1330",Information and communications technology service managers,"Information and communications technology services managers plan, direct and coordinate the acquisition, development, maintenance and use of computer and telecommunication systems, either as the manager of a department or as the general manager of an enterprise or organization that does not have a hierarchy of managers.
+Tasks include -
+(a)  consulting with users, management, vendors and technicians to assess computing needs and system requirements, and specifying technology to meet those needs; 
+(b)  formulating and directing information and communication technology (ICT) strategies, policies and plans; 
+(c)  directing the selection and installation of ICT resources and the provision of user training; 
+(d)  directing ICT operations, analysing workflow, establishing priorities, developing standards and setting deadlines;
+(e)  overseeing the security of ICT systems;
+(f)  assigning, reviewing, managing and leading the work of systems analysts, programmers and other computer-related workers;
+(g)  evaluating the organization’s technology use and needs and recommending improvements such as hardware and software upgrades;
+(h)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(i)  establishing and directing operational and administrative procedures;
+ (j)  overseeing the selection, training and performance of staff; 
+(k)  representing the enterprise or organization at ICT-related conventions, seminars and conferences.
+Examples of the occupations classified here:
+-  Application development manager
+-  Chief information officer
+-  Data operations manager 
+-  Data processing manager
+-  ICT development manager
+-  Information systems director
+-  Information technology manager (IT manager)
+-  Internet service provider
+-  Network manager
+",,2025-04-17 12:43:10.799,2025-04-17 12:43:10.799,
+41,"134",Professional services managers,"Professional services managers plan, direct and coordinate the provision of child care, health, welfare, education and other professional services, and manage the branches of institutions providing financial and insurance services.
+Tasks performed usually include: formulating policies and plans for the provision of services and operation of establishments; setting standards and objectives; developing and implementing programmes and services to meet the needs of clients; directing and coordinating the allocation of resources; liaising with parents, boards, funding bodies, the community representatives and related agencies to discuss areas of cooperation and coordination; monitoring and controlling expenditure; overseeing the selection, development and performance of staff; preparing, or arranging for the preparation of, reports, budgets and forecasts; representing the organization in negotiations with other agencies, and at conventions, seminars, public hearings and forums.
+Occupations in this minor group are classified into the following unit groups:
+1341 Child Care Services Managers
+1342 Health Services Managers
+1343 Aged Care Services Managers
+1344 Social Welfare Managers
+1345 Education Managers
+1346 Financial and Insurance Services Branch Managers
+1349 Professional Services Managers Not Elsewhere Classified
+Note
+Professional services managers are responsible for planning, directing and coordinating the provision of specialized professional and technical services. Specialized qualifications and extensive experience relevant to one or more occupations classified in Major Group 2: Professionals, or Major Group 3: Technicians and Associate Professionals, are usually required.
+",,2025-04-17 12:43:10.800,2025-04-17 12:43:10.800,
+42,"1341",Child care services managers,"Child care services managers plan, direct, coordinate and evaluate the provision of care for children in before-school, after-school, vacation and day care centres and services.
+Tasks include - 
+(a)  developing and implementing programmes to enhance the physical, social, emotional and intellectual development of young children;
+(b)  establishing and monitoring budgets and determining allocation of funds for staff, supplies, materials, equipment and maintenance;
+(c)  overseeing and coordinating the provision of care for children in before-school, after-school, day and vacation care centres;
+(d)  directing and supervising child carers in providing care and supervision for young children;
+(e)  managing physical facilities and making sure all buildings and equipment are maintained to ensure the centre is a safe area for children, staff and visitors;
+(f)  reviewing and interpreting government codes, and developing procedures to meet codes (e.g. concerning safety and security);
+(g)  monitoring children’s progress and conferring with parents or guardians;
+(h)  preparing and maintaining records and accounts for a child care centre;
+(i)  recruiting and evaluating staff and coordinating their professional development.
+Example of the occupations classified here:
+-  Child care centre manager
+",,2025-04-17 12:43:10.800,2025-04-17 12:43:10.800,
+148,"2512",Software developers,"Software developers research, analyse and evaluate requirements for existing or new software applications and operating systems, and design, develop, test and maintain software solutions to meet these requirements.
+Tasks include -
+(a)  researching, analysing and evaluating requirements for software applications and operating systems;
+(b)  researching, designing and developing computer software systems;
+(c)  consulting with engineering staff to evaluate interfaces between hardware and software;
+(d)  developing and directing software testing and validation procedures;
+(e)  modifying existing software to correct errors, to adapt it to new hardware or to upgrade interfaces and improve performance;
+(f)  directing software programming and development of documentation;
+(g)  assessing, developing, upgrading and documenting maintenance procedures for operating systems, communications environments and applications software;
+(h)  consulting with customers concerning maintenance of software systems.
+Examples of the occupations classified here:
+- Programmer analyst
+- Software designer 
+- Software developer
+- Software engineer
+Some related occupations classified elsewhere:
+- Applications programmers - 2514
+",,2025-04-17 12:43:10.890,2025-04-17 12:43:10.890,
+43,"1342",Health services managers,"Health services managers plan, direct, coordinate and evaluate the provision of clinical and community health care services in hospitals, clinics, public health agencies and similar organizations.
+Tasks include - 
+(a)  providing overall direction and management for the service, facility, organization or centre; 
+(b)  directing, supervising and evaluating the work activities of medical, nursing, technical, clerical, service, maintenance and other personnel;
+(c)  establishing objectives and evaluative or operational criteria for units they manage; 
+(d)  directing or conducting recruitment, hiring and training of personnel;
+(e)  developing, implementing and monitoring procedures, policies and performance standards for medical, nursing, technical and administrative staff;
+(f)  monitoring the use of diagnostic services, inpatient beds, facilities and staff to ensure effective use of resources, and assess the need for additional staff, equipment and services;
+(g)  controlling administrative operations such as budget planning, report preparation,sand expenditure on supplies, equipment and services;
+(h)  liaising with other health and welfare service providers, boards and funding bodies to coordinate the provision of services;
+(i)  advising government bodies about measures to improve health and welfare services and facilities; 
+(j)  representing the organization in negotiations, and at conventions, seminars, public hearings and forums.
+Examples of the occupations classified here:
+-  Chief public health officer
+-  Clinical director  
+-  Community health care coordinator 
+-  Director of nursing
+-  Health facility administrator
+-  Hospital matron
+-  Medical administrator
+Some related occupations classified elsewhere:
+-  Aged care services manager - 1343
+",,2025-04-17 12:43:10.801,2025-04-17 12:43:10.801,
+44,"1343",Aged care services managers,"Aged care services managers plan, direct, coordinate and evaluate the provision of residential and personal care services for individuals and families who are in need of such services due to the effects of ageing.
+Tasks include - 
+(a)  providing overall direction and management for a service, facility, organization or centre; 
+(b)  directing, supervising and evaluating the work activities of medical, nursing, technical, clerical, service, maintenance and other personnel; 
+(c)  establishing objectives and evaluative or operational criteria for units they manage; 
+(d)  directing or conducting recruitment, hiring and training of personnel;
+(e)  developing, implementing and monitoring procedures, policies and performance standards for nursing, personal care, technical and administrative staff; 
+(f)  coordinating and administering welfare programmes and care services for the elderly;
+(g)  controlling administrative operations such as budget planning, report preparation, and expenditure on supplies, equipment and services; 
+(h)  liaising with other health and welfare providers, boards and funding bodies to coordinate the provision of services;
+(i)  advising government bodies about measures to improve health and welfare services and facilities; 
+(j)  representing the organization in negotiations, and at conventions, seminars, public hearings and forums.
+Examples of occupations classified here:
+-  Aged care home director
+-  Community aged care coordinator 
+-  Nursing home director
+-  Retirement village coordinator
+Some related occupations classified elsewhere:
+-  Health services manager - 1342
+",,2025-04-17 12:43:10.802,2025-04-17 12:43:10.802,
+45,"1344",Social welfare managers,"Social welfare managers plan, direct and coordinate the provision of social and community service programmes such as income support, family assistance, children’s services and other community programmes and services.
+Tasks include -
+(a)  providing overall direction and management for a service, facility, organization or centre; 
+(b)  developing, implementing and monitoring procedures, policies and standards for staff; 
+(c)  monitoring and evaluating resources devoted to the provision of welfare, housing and other social services;
+(d)  controlling administrative operations such as budget planning, report preparation, and expenditure on supplies, equipment and services;
+(e)  liaising with other welfare and health services providers, boards and funding bodies to discuss areas of health and welfare service cooperation and coordination;
+(f)  advising government bodies about measures to improve welfare services and facilities;
+(g)  representing the organization in negotiations, and at conventions, seminars, public hearings and forums;
+(h)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(i)  establishing and directing operational and administrative procedures; 
+(j)  overseeing the selection, training and performance of staff. 
+Examples of the occupations classified here:
+-  Community centre manager
+-  Family services manager
+-  Housing services manager
+-  Welfare centre manager
+",,2025-04-17 12:43:10.803,2025-04-17 12:43:10.803,
+46,"1345",Education managers,"Education managers plan, direct, coordinate and evaluate the educational and administrative aspects of education services, primary and secondary schools, colleges and faculties and departments in universities and other educational institutions.
+Tasks include -
+ (a)  determining educational programmes based on frameworks established by education authorities and governing bodies;
+(b)  implementing systems and procedures to monitor school performance and student enrolments; 
+(c)  directing administrative and clerical activities concerning student admissions and educational services;
+(d)  controlling administrative operations such as budget planning, report preparation, and expenditure on supplies, equipment and services;
+(e)  providing leadership and guidance to teaching, academic and administrative staff as well as to students;
+(f)  evaluating the work of teachers and lecturers by visiting classrooms, observing teaching methods, reviewing instructional objectives and examining learning materials;
+(g)  promoting the educational programme, and representing the service or institution in the wider community;
+(h)  supervising the maintenance of educational facilities;
+(i)  developing and enforcing a disciplinary code to create a safe and conducive environment for students and teachers;
+(j)  organizing and implementing methods of raising additional funds in conjunction with parent and community groups and sponsors;
+(k)  controlling selection, training and supervision of staff.
+Examples of the occupations classified here:
+-  College director
+-  Dean (university)  
+-  Head teacher
+-  School principal
+",,2025-04-17 12:43:10.804,2025-04-17 12:43:10.804,
+161,"2619",Legal professionals not elsewhere classified,"This unit group covers legal professionals not classified elsewhere in Minor Group 261: Legal Professionals. For instance, the group includes those who perform legal functions other than pleading or prosecuting cases or presiding over judicial proceedings.
+In such cases tasks would include -
+(a)  giving advice on legal aspects of various personal, business and administrative problems;
+(b)  drawing up legal documents and contracts;
+(c)  arranging property transfers;
+(d)  determining, by inquest, the causes of any death not obviously due to natural causes.
+Examples of the occupations classified here:
+- Coroner
+- Jurist (except lawyer or judge)
+- Notary
+",,2025-04-17 12:43:10.900,2025-04-17 12:43:10.900,
+47,"1346",Financial and insurance services branch managers,"Financial and insurance services branch managers plan, direct and coordinate the branches of institutions that provide financial and insurance services, such as banks, building societies, credit unions and insurance companies. They provide advice and assistance to clients on financial and insurance matters.
+Tasks include - 
+(a)  planning, directing and coordinating the activities of staff in the branch;
+(b)  establishing and maintaining relationships with individual and business customers;
+(c)  providing advice and assistance to customers on their financial and insurance needs and on matters such as changes in law that may affect customers;
+(d)  examining, evaluating and processing loan and insurance applications;
+(e)  monitoring credit extension decisions;
+(f)  conducting financial investigations;
+(g)  overseeing the flow of cash and financial instruments, and the preparation of financial and regulatory reports;
+(h)  approving or rejecting, or coordinating the approval or rejection of, lines of credit for commercial, real estate and personal loans;
+(i)  coordinating cooperation with other branches of the company;
+(j)  managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(k)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+-  Bank manager
+-  Building society manager
+-  Credit union manager
+-  Financial institution branch manager
+-  Insurance agency manager
+Some related occupations classified elsewhere:
+-  Finance manager - 1211
+-  Credit and loans officers - 3312
+-  Insurance agent - 3321
+",,2025-04-17 12:43:10.804,2025-04-17 12:43:10.804,
+48,"1349",Professional services managers not elsewhere classified,"This unit group covers managers who plan, direct, coordinate and evaluate the provision of specialized professional and technical services and are not classified in Minor Group 121: Business Services and Administration Managers, or elsewhere in Minor Group 134: Professional Services Managers. For instance, managers responsible for the provision of policing, correctional, library, legal and fire services are classified here.
+In such cases tasks would include -
+(a)  providing overall direction and management for a service, facility, organization or centre; 
+(b)  developing, implementing and monitoring procedures, policies and standards for staff; 
+(c)  directing, supervising and evaluating the work activities of professional, technical, clerical, service, maintenance and other personnel; 
+(d)  monitoring and evaluating resources devoted to the provision of services;
+(e)  controlling administrative operations such as budget planning, report preparation, and expenditure on supplies, equipment and services;
+(f)  planning, directing and coordinating the provision of services;
+(g)  coordinating cooperation with other service provision agencies in the same or related fields;
+(h)  managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(i)  overseeing the selection, training and performance of staff.
+Examples of the occupations classified here:
+ -  Archives manager
+ -  Art gallery manager
+ -  Correctional services manager
+ -  Legal service manager
+ -  Library manager
+ -  Museum manager
+ -  Police superintendent
+ -  Prison governor
+Note
+Professional services managers are responsible for planning, directing and coordinating the provision of specialized professional and technical services. Specialized qualifications and extensive experience relevant to one or more occupations classified in Major Group 2: Professionals, or Major Group 3: Technicians and Associate Professionals, are usually required.
+",,2025-04-17 12:43:10.805,2025-04-17 12:43:10.805,
+49,"14","Hospitality, retail and other services managers","Hospitality, retail and other services managers plan, organize and direct the operations of establishments which provide accommodation, hospitality, retail and other services. Competent performance in most occupations in this sub-major group requires skills at the third ISCO skill level.
+Tasks performed by workers in this sub-major group usually include:  planning and organizing special functions, sporting, gaming and entertainment activities and the range and mix of products, stock levels and service standards; promoting and selling goods and services;  observing liquor, gaming, health and other laws and regulations;   developing and reviewing policies, programmes and procedures concerning customer relations and goods and services provided; promoting facilities for conferences, conventions and trade shows to potential customers; organizing the purchase and maintenance of transport vehicles, equipment and fuel, and transporting goods;  controlling the selection, training and supervision of staff;  ensuring compliance with occupational health and safety regulations.
+Occupations in this sub-major group are classified into the following minor groups:
+141 Hotel and Restaurant Managers
+142 Retail and Wholesale Trade Managers
+143 Other Services Managers 
+Notes
+Sub-major Group 14: Hospitality, Retail and Other Services Managers is for managers of establishments that provide services directly to the public, usually in organizations that are too small to have hierarchies of managers. Managers responsible for planning, directing and coordinating the provision of specialized professional and technical services that usually require specialized qualifications are classified in various unit groups in Sub-major Groups 12: Administrative and Commercial Managers and 13: Production and Specialized Services Managers.
+Operators of small shops, guest houses, cafés, restaurants and bars for whom the management and supervision of staff is not a significant component of the work are classified in the relevant unit group  in Sub-major Groups  51: Personal Services Workers or 52: Sales Workers, depending on the main tasks performed. 
+",,2025-04-17 12:43:10.806,2025-04-17 12:43:10.806,
+50,"141",Hotel and restaurant managers,"Hotel and restaurant managers plan, organize and direct the operations of establishments that provide accommodation, meals, beverages and other hospitality services.
+Tasks performed usually include: planning and organizing special functions and sporting, gaming and entertainment activities; directing and overseeing reservation, reception, room service and housekeeping activities; observing liquor, gaming, health and other laws and regulations; monitoring quality at all stages of preparation and presentation of food and services; controlling the selection, training and supervision of staff; ensuring compliance with occupational health and safety regulations.
+Occupations in this minor group are classified into the following unit groups:
+1411 Hotel Managers
+1412 Restaurant Managers
+",,2025-04-17 12:43:10.807,2025-04-17 12:43:10.807,
+51,"1411",Hotel managers,"Hotel managers plan, organize and direct the operations of hotels, motels and similar establishments to provide guest accommodation and other services.
+Tasks include - 
+(a)  directing and overseeing reservation, reception, room service and housekeeping activities;
+(b)  supervising security arrangements and garden and property maintenance;
+(c)  planning and supervising bar, restaurant, function and conference activities;
+(d)  observing liquor, gaming and other laws and regulations;
+(e)  assessing and reviewing customer satisfaction;
+(f)  overseeing accounting and purchasing activities;
+(g)  undertaking budgeting for the establishment;
+(h)  controlling selection, training and supervision of staff; 
+(i)  ensuring compliance with occupational health and safety regulations;
+(j)  providing guests with local tourism information, and arranging tours and transportation.
+Examples of the occupations classified here:
+-  Hotel manager
+-  Motel manager
+-  Youth hostel manager
+Some related occupations classified elsewhere:
+-  Bed and breakfast operator - 5152
+Notes
+Operators of small establishments, such as some bed and breakfast establishments and small guest houses that provide accommodation and limited meal services to clients effectively as paying guests in private households, and for whom the management and supervision of staff is not a significant component of the work, are classified in Unit Group 5152: Domestic Housekeepers.
+Chief executive officers and specialized managers of hotel management companies or hotel chains are classified in the relevant unit group in Sub-major Groups 11 and 12.
+",,2025-04-17 12:43:10.807,2025-04-17 12:43:10.807,
+162,"262","Librarians, archivists and curators","Librarians, archivists and curators develop and maintain the collections of archives, libraries, museums, art galleries and similar establishments.
+Tasks performed usually include: appraising or developing and organizing the contents of archives and artefacts of historical, cultural and artistic interest, and ensuring their safekeeping and preservation; organizing the collections of and exhibitions at museums, art galleries and similar establishments; developing and maintaining the systematic collection of recorded and published material and making it available to users in libraries and related institutions; preparing scholarly papers and reports; conducting research.
+Occupations in this minor group are classified into the following unit groups:
+2621 Archivists and Curators 
+2622 Librarians and Related Information Professionals
+",,2025-04-17 12:43:10.901,2025-04-17 12:43:10.901,
+52,"1412",Restaurant managers,"Restaurant managers plan, organize and direct the operations of cafés, restaurants and related establishments to provide dining and catering services.
+Tasks include - 
+(a)  planning menus in consultation with chefs and cooks;
+(b)  planning and organizing special functions;
+(c)  arranging the purchasing and pricing of goods according to budget;
+(d)  maintaining records of stock levels and financial transactions;
+(e)  ensuring that dining, kitchen and food storage facilities comply with health regulations and are clean, functional and of suitable appearance;
+(f)  conferring with customers to assess their satisfaction with meals and service;
+(g)  selecting staff, setting staff work schedules, and training and supervising waiting and kitchen staff;
+(h)  taking reservations, greeting guests and assisting in taking orders;
+(i)  negotiating arrangements with clients and suppliers;
+(j)  ensuring compliance with occupational health and safety regulations.
+Examples of the occupations classified here:
+-  Café manager
+-  Catering manager
+-  Restaurant manager
+Some related occupations classified elsewhere:
+-  Chef - 3434
+Note
+Operators of small cafés, restaurants and bars for whom the management and supervision of staff is not a significant component of the work are classified in Unit Groups 5120: Cooks, 5131: Waiters or 5132: Bartenders, depending on the main tasks performed. 
+",,2025-04-17 12:43:10.808,2025-04-17 12:43:10.808,
+53,"142",Retail and wholesale trade managers,"Retail and wholesale trade managers plan, organize, coordinate and control the operations of establishments that sell goods on a retail or wholesale basis. They are responsible for the budgets, staffing and strategic and operational direction of shops, or of organizational units within shops that sell particular types of product.
+Tasks performed usually include: determining product mix, stock levels and service standards; formulating and implementing purchasing and marketing policies, and setting prices; promoting and advertising the establishment's goods and services; maintaining records of stock levels and financial transactions; undertaking budgeting for the establishment; controlling selection, training and supervision of staff; ensuring compliance with occupational health and safety regulations.
+Occupations in this minor group are classified into the following unit group:
+1420 Retail and Wholesale Trade Managers
+Notes
+Retail and wholesale trade managers are frequently employed in relatively small establishments that do not have a hierarchy of managers. The managers of large retail establishments such as supermarkets and department stores, however, should also be classified in this group, although such establishments may have a hierarchy of managers and supervisors. General managers of groups of establishments such as supermarket or department store chains are classified, however, in Unit Group 1120: Managing Directors and Chief Executives. 
+Operators of small shops for whom the management and supervision of staff is not a significant component of the work are classified in Unit Group 5221: Shopkeepers. 
+Staff who control and direct the activities of shop sales assistants, checkout operators and other workers, but who do not take responsibility for determining product mix, overall setting of prices, budgets and staffing levels, selection and recruitment are classified in Unit Group 5222: Shop Supervisors.
+",,2025-04-17 12:43:10.809,2025-04-17 12:43:10.809,
+54,"1420",Retail and wholesale trade managers,"Retail and wholesale trade managers, plan, organize, coordinate and control the operations of establishments that sell goods on a retail or wholesale basis. They are responsible for the budgets, staffing and strategic and operational direction of shops, or of organizational units within shops that sell particular types of product.
+Tasks include - 
+(a)  determining product mix, stock levels and service standards; 
+(b)  formulating and implementing purchasing and marketing policies, and setting prices; 
+(c)  promoting and advertising the establishment’s goods and services;
+(d)  maintaining records of stock levels and financial transactions; 
+(e)  undertaking budgeting for the establishment; 
+(f)  controlling selection, training and supervision of staff; 
+(g)  ensuring compliance with occupational health and safety regulations.
+Examples of the occupations classified here:
+-  Grocery manager
+-  Retail manager
+-  Shop manager
+-  Supermarket manager
+
+Some related occupations classified elsewhere:
+-  Sales manager - 1221
+-  Shopkeeper - 5221
+-  Shop supervisor - 5222
+-  Shop sales assistant - 5223
+Notes
+Retail and wholesale trade managers are frequently employed in relatively small establishments that do not have a hierarchy of managers. The managers of large retail establishments such as supermarkets and department stores, however, should generally also be classified in this group, although such establishments may have a hierarchy of managers and supervisors. General managers of groups of establishments such as supermarket or department store chains are classified, however, in Unit Group 1120: Managing Directors and Chief Executives. 
+Operators of small shops for whom the management and supervision of staff is not a significant component of the work are classified in Unit Group 5221: Shopkeepers. 
+Staff who control and direct the activities of shop sales assistants, checkout operators and other workers, but who do not take responsibility for determining product mix, overall setting of prices, budgets and staffing levels, selection and recruitment, are classified in Unit Group 5222: Shop Supervisors.
+",,2025-04-17 12:43:10.810,2025-04-17 12:43:10.810,
+55,"143",Other services managers,"Other services managers plan, organize and control the operations of establishments that provide sporting, cultural, recreational, travel, customer contact and other amenity services.
+Tasks performed usually include: planning and organizing the range and mix of services or activities provided; ensuring that facilities are kept clean and in good condition; keeping abreast of new trends and developments relevant to the service provided; advising on the facilities available and promoting publicity; checking and keeping custody of all cash receipts and making regular stock checks; establishing and managing budgets; controlling expenditure and ensuring the efficient use of resources; planning and directing daily operations; controlling the selection, supervision and performance of staff; ensuring compliance with health and safety requirements.
+Occupations in this minor group are classified into the following unit groups:
+1431 Sports, Recreation and Cultural Centre Managers
+1439 Services Managers Not Elsewhere Classified
+",,2025-04-17 12:43:10.810,2025-04-17 12:43:10.810,
+56,"1431","Sports, recreation and cultural centre managers","Sports, recreation and cultural centre managers plan, organize and control the operations of establishments that provide sporting, artistic, theatrical and other recreational and amenity services.
+Tasks include -
+(a)  planning and organizing the range and mix of entertainment, attractions, cultural activities and sports and fitness programmes to be offered by the centre; 
+(b)  ensuring that facilities are kept clean and in good condition;
+(c)  keeping abreast of new trends and developments in the creative arts and arranging theatrical productions and performances by bands and orchestras;
+(d)  advising on the facilities available and promoting publicity in relation to events, shows and activities;
+(e)  checking and keeping custody of all cash receipts and making regular stock checks;
+(f)  establishing and managing budgets, controlling expenditure and ensuring the efficient use of resources;
+(g)  planning and directing daily operations;
+(h)  controlling the selection, supervision and performance of staff;
+(i)  ensuring compliance with health and safety regulations.
+Examples of the occupations classified here:
+-  Amusement park manager
+-  Billiards or pool hall manager
+-  Casino manager
+-  Cinema manager
+-  Leisure centre manager
+-  Riding school manager
+-  Sports centre manager
+-  Theatre manager
+-  Theme park manager
+
+Some related occupations classified elsewhere:
+-  Art gallery manager - 1349
+-  Library manager - 1349
+-  Museum manager - 1349
+",,2025-04-17 12:43:10.811,2025-04-17 12:43:10.811,
+58,"2",Professionals,"Professionals increase the existing stock of knowledge; apply scientific or artistic concepts and theories; teach about the foregoing in a systematic manner; or engage in any combination of these activities. Competent performance in most occupations in this major group requires skills at the fourth ISCO skill level.
+Tasks performed by professionals usually include: conducting analysis and  research, and developing concepts, theories and operational methods; advising on or applying existing knowledge related to physical sciences, mathematics, engineering and technology, life sciences, medical and health services, social sciences and humanities; teaching the theory and practice of one or more disciplines at different educational levels; teaching and educating persons with learning difficulties or special needs;  providing various business, legal and social services; creating and performing works of art; providing spiritual guidance; preparing scientific papers and reports. Supervision of other workers may be included.
+Occupations in this major group are classified into the following sub-major groups:
+21 Science and Engineering Professionals
+22 Health Professionals
+23 Teaching Professionals
+24 Business and Administration Professionals
+25 Information and Communications Technology Professionals
+26 Legal, Social and Cultural Professionals
+",,2025-04-17 12:43:10.813,2025-04-17 12:43:10.813,
+59,"21",Science and engineering professionals,"Science and engineering professionals conduct research; improve or develop concepts, theories and operational methods; or apply scientific knowledge relating to fields such as physics, astronomy, meteorology, chemistry, geophysics, geology, biology, ecology, pharmacology, medicine, mathematics, statistics, architecture, engineering, design and technology.  Competent performance in most occupations in this sub-major group requires skills at the fourth ISCO skill level.
+Tasks performed by workers in this sub-major group usually include: conducting research, enlarging, advising on or applying scientific knowledge obtained through the study of structures and properties of physical matter and phenomena, chemical characteristics and processes of various substances, materials and products, all forms of human, animal and plant life and of mathematical and statistical concepts and methods; advising on, designing and directing construction of buildings, towns and traffic systems, or civil engineering and industrial  structures, as well as machines and other equipment; advising on and applying mining methods and ensuring their optimum use; surveying land and sea and making maps; studying and advising on technological aspects of particular materials, products and processes, and on efficiency of production and work organization; preparing scientific papers and reports. Supervision of other workers may be included.
+Occupations in this sub-major group are classified into the following minor groups:
+211 Physical and Earth Science Professionals
+212 Mathematicians, Actuaries and Statisticians
+213 Life Science Professionals 
+214 Engineering Professionals (excluding Electrotechnology)
+215 Electrotechnology Engineers
+216 Architects, Planners, Surveyors and Designers
+",,2025-04-17 12:43:10.814,2025-04-17 12:43:10.814,
+60,"211",Physical and earth science professionals,"Physical and earth science professionals conduct research; improve or develop concepts, theories and operational methods; or apply scientific knowledge relating to physics, astronomy, meteorology, chemistry, geology and geophysics.
+Tasks performed usually include: enlarging scientific knowledge through research and experiments related to mechanics, thermodynamics, optics, sonics, electricity, magnetism, electronics, nuclear physics, astronomy, various branches of chemistry, atmospheric conditions and the physical nature of the Earth; advising on or applying this knowledge in such fields as manufacturing, agriculture, medicine, navigation, space exploration, oil, gas, water and mineral exploitation, telecommunications and other services, or civil engineering; preparing scientific papers and reports.
+Occupations in this minor group are classified into the following unit groups:
+2111 Physicists and Astronomers
+2112 Meteorologists
+2113 Chemists 
+2114 Geologists and Geophysicists
+",,2025-04-17 12:43:10.815,2025-04-17 12:43:10.815,
+61,"2111",Physicists and astronomers,"Physicists and astronomers conduct research and improve or develop concepts, theories and operational methods concerning matter, space, time, energy, forces and fields and the interrelationship between these physical phenomena. They apply scientific knowledge relating to physics and astronomy in industrial, medical, military or other fields.
+Tasks include -
+(a)  conducting research and improving or developing concepts, theories, instrumentation, software and operational methods related to physics and astronomy;
+(b)  conducting experiments, tests and analyses on the structure and properties of matter in fields such as mechanics, thermodynamics, electronics, communications, power generation and distribution, aerodynamics, optics and lasers, remote sensing, medicine, sonics, magnetism and nuclear physics;
+(c)  evaluating results of investigations and experiments and expressing conclusions, mainly using mathematical techniques and models;
+(d)  applying principles, techniques and processes to develop or improve industrial, medical, military and other practical applications of the principles and techniques of physics or astronomy; 
+(e)  ensuring the safe and effective delivery of radiation (ionizing and non-ionizing) to patients to achieve a diagnostic or therapeutic result as prescribed by a medical practitioner;
+(f)  ensuring the accurate measurement and characterization of physical quantities used in medical applications; 
+(g)  testing, commissioning and evaluating equipment used in applications such as imaging, medical treatment and dosimetry; 
+(h)  advising and consulting with medical practitioners and other health care professionals in optimizing the balance between the beneficial and deleterious effects of radiation; 
+(i)  observing, analysing and interpreting celestial phenomena and developing methods, numerical models and techniques to extend knowledge of fields such as navigation, satellite communication, space exploration, celestial bodies and cosmic radiation;
+(j) developing, implementing and maintaining standards and protocols for the measurement of physical phenomena and for the use of nuclear technology in industrial and medical applications;
+(k) preparing scientific papers and reports.
+Examples of the occupations classified here:
+-  Astronomer
+-  Medical physicist
+-  Nuclear physicist
+-  Physicist
+Some related occupations classified elsewhere:
+-  Radiation oncologist - 2212
+-  Radiologist - 2212
+-  Specialist physician (nuclear medicine) - 2212
+-  Radiographer - 3211
+Note
+It should be noted that, while they are appropriately classified in this unit group with other physicists, medical physicists are considered to be an integral part of the health workforce alongside those occupations classified in Sub-major Group 22: Health Professionals and others classified in a number of other unit groups in Major Group 2: Professionals.
+",,2025-04-17 12:43:10.815,2025-04-17 12:43:10.815,
+62,"2112",Meteorologists,"Meteorologists prepare short-term or long-term weather forecasts used in aviation, shipping, agriculture and other areas and for the information of the general public. They conduct research related to the composition, structure and dynamics of the atmosphere.
+Tasks include -
+(a)  investigating direction and speed of air movements, pressures, temperatures, humidity, physical and chemical transformation of pollutants and other phenomena such as cloud formation and precipitation, electrical disturbances or solar radiation;
+(b)  studying data collected from meteorological stations, radar and satellite imagery and computer model output to plot and forecast weather conditions; 
+(c)  preparing and reporting short-term or long-term weather maps, forecasts and warnings relating to atmospheric phenomena such as cyclones, storms and other hazards to life and property, and disseminating information about atmospheric conditions through a variety of media including radio, television, print and the Internet;
+(d)  conducting experiments in fog dispersal, cloud seeding, rain enhancement and other types of weather modification programmes; 
+(e)  developing and testing mathematical computer models of weather and climate for experimental or operational use;
+(f)  participating in studies of the effect of weather on the environment;
+(g)  analysing the impact of industrial projects and human activity on the climate and quality of the air, and working with the social science, engineering and economic communities to develop appropriate mitigation strategies;
+(h)  engaging in the design and development of new equipment and procedures for meteorological data collection and remote sensing, or for related applications;
+(i)  conducting research on and improving or developing concepts, theories and operational methods related to the composition, structure and dynamics of the atmosphere, and preparing scientific papers and reports on the outcome of this research.
+Examples of the occupations classified here:
+-  Climatologist
+-  Hydrometeorologist

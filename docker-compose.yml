@@ -1,0 +1,16 @@
+services:
+  # Application
+  app:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://baytpg:casi02@192.168.6.7:9988/baytpg}
+    volumes:
+      - ./client:/app/client
+      - ./server:/app/server
+      - ./shared:/app/shared
+      - ./uploads:/app/uploads
+      - /app/node_modules
+    restart: unless-stopped 
